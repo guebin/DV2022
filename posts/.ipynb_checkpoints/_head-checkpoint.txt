@@ -1,7 +1,0 @@
----
-title: "12wk-1"
-author: "최규빈"
-date: "11/21/2022"
-categories:
-  - 지리정보시각화
----
