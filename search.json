@@ -385,25 +385,18 @@
     "text": "Choropleth– json 파일 뜯어보기, folium.Choropleth를 이용한 시각화 I, folium.Choropleth를 이용한 시각화 II"
   },
   {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#folium-polygon-marker",
-    "href": "posts/2022-11-28-13wk-1-draft.html#folium-polygon-marker",
+    "objectID": "posts/2022-11-28-13wk-1-draft.html#folium.polygon",
+    "href": "posts/2022-11-28-13wk-1-draft.html#folium.polygon",
     "title": "13wk-1 draft",
-    "section": "folium: Polygon marker",
-    "text": "folium: Polygon marker\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8475,127.1305], # 자연대본관  \n    zoom_start=14,\n    tiles=\"CartoDB positron\"\n)\njbnu = folium.Marker(\n    location = [35.8475,127.1305] # 자연대본관  \n)\nhome = folium.Marker(\n    location = [35.8368, 127.1118] # 집 \n)\njbnu.add_to(m)\nhome.add_to(m)\nm"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#folium-multipolygon-marker",
-    "href": "posts/2022-11-28-13wk-1-draft.html#folium-multipolygon-marker",
-    "title": "13wk-1 draft",
-    "section": "folium: MultiPolygon marker",
-    "text": "folium: MultiPolygon marker"
+    "section": "folium.Polygon",
+    "text": "folium.Polygon\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8475,127.1305], # 자연대본관  \n    zoom_start=18,\n)\nfolium.Marker(\n    location = [35.8471, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.1289]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1297]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.12995]\n).add_to(m)\nfolium.Marker(\n    location = [35.8474, 127.1300]\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8475,127.1305], # 자연대본관  \n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8475,127.1305], # 자연대본관  \n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n                 \n                 [[ 35.8471 , 127.1302],\n                 [ 35.8468 , 127.1300],\n                 [ 35.84635, 127.1302],\n                 [ 35.84635, 127.1308],\n                 [ 35.8468 , 127.13105],\n                 [ 35.8474 , 127.1311]]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
   },
   {
     "objectID": "posts/2022-11-28-13wk-1-draft.html#dict-view-vs-copy",
     "href": "posts/2022-11-28-13wk-1-draft.html#dict-view-vs-copy",
     "title": "13wk-1 draft",
     "section": "dict: view vs copy",
-    "text": "dict: view vs copy"
+    "text": "dict: view vs copy\n- 원하지 않는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1 \ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 9999}, {'a': 1, 'b': 2, 'c': 9999})\n\n\n- 원하는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1.copy()\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 9999})"
   },
   {
     "objectID": "posts/2022-11-28-13wk-1-draft.html#예제1-global-scale",
