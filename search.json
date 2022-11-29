@@ -378,90 +378,6 @@
     "text": "x축, y축 label 설정\n\nax.xaxis.set_label_text('xlabel',size=16,family='serif',weight=1000,style='italic')\n#_fontsettings={'size':16,'family':'serif','weight'=1000,'style':'italic'}\n#ax.xaxis.set_label_text('xlabel',_fontsettings)\nfig\n\n\n\n\n폰트ref - size: - fontweight: 0~1000 - family: ‘serif’, ‘sans-serif’, ‘monospace’ - style: ‘normal’, ‘italic’\n\nax.set_ylabel('ylabel',size=16)\nfig"
   },
   {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html",
-    "href": "posts/2022-11-28-13wk-1-draft.html",
-    "title": "13wk-1 draft",
-    "section": "",
-    "text": "Choropleth– json 파일 뜯어보기, folium.Choropleth를 이용한 시각화 I, folium.Choropleth를 이용한 시각화 II"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#folium.polygon",
-    "href": "posts/2022-11-28-13wk-1-draft.html#folium.polygon",
-    "title": "13wk-1 draft",
-    "section": "folium.Polygon",
-    "text": "folium.Polygon\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8468,127.1294], # 분수대\n    zoom_start=18,\n)\nfolium.Marker(\n    location = [35.8471, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.1289]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1297]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.12995]\n).add_to(m)\nfolium.Marker(\n    location = [35.8474, 127.1300]\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8468,127.1294], # 분수대\n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8475,127.1305], # 자연대본관  \n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n                 \n                 [[ 35.8471 , 127.1302],\n                 [ 35.8468 , 127.1300],\n                 [ 35.84635, 127.1302],\n                 [ 35.84635, 127.1308],\n                 [ 35.8468 , 127.13105],\n                 [ 35.8474 , 127.1311]]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#dict-view-vs-copy",
-    "href": "posts/2022-11-28-13wk-1-draft.html#dict-view-vs-copy",
-    "title": "13wk-1 draft",
-    "section": "dict: view vs copy",
-    "text": "dict: view vs copy\n- 원하지 않는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1 \ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 9999}, {'a': 1, 'b': 2, 'c': 9999})\n\n\n- 원하는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1.copy()\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 9999})"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#json-파일-다운로드",
-    "href": "posts/2022-11-28-13wk-1-draft.html#json-파일-다운로드",
-    "title": "13wk-1 draft",
-    "section": "json 파일 다운로드",
-    "text": "json 파일 다운로드\n\nglobal_distriction_jsonurl='https://raw.githubusercontent.com/southkorea/southkorea-maps/master/kostat/2018/json/skorea-provinces-2018-geo.json'\nlocal_distriction_jsonurl='https://raw.githubusercontent.com/southkorea/southkorea-maps/master/kostat/2018/json/skorea-municipalities-2018-geo.json'\n\n\nglobal_dict = json.loads(requests.get(global_distriction_jsonurl).text)\nlocal_dict = json.loads(requests.get(local_distriction_jsonurl).text)"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#json-파일의-구조",
-    "href": "posts/2022-11-28-13wk-1-draft.html#json-파일의-구조",
-    "title": "13wk-1 draft",
-    "section": "json 파일의 구조",
-    "text": "json 파일의 구조\n- global_dict의 구조를 살펴보면 아래와 같음\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘Polygon’\n\n\n\n\n\ncoordinates\n(1,??,2) list\n\n\n\n\nproperties\nname\n‘서울특별시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seoul’\n\n\n\n\n\ncode\n‘11’\n\n\n\n…\n…\n…\n…\n\n\n\n[16]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(6,1,??,2) list\n\n\n\n\nproperties\nname\n‘’제주특별자치도’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jeju-do’\n\n\n\n\n\ncode\n‘39’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’\n\n\n\n\n- local_dict의 구조를 살펴보면 아래와 같음\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(1,1,??,2) list\n\n\n\n\nproperties\nname\n‘종로구’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jongno-gu’\n\n\n\n\n\ncode\n‘11010’\n\n\n\n…\n…\n…\n…\n\n\n\n[249]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(10,1,??,2) list\n\n\n\n\nproperties\nname\n‘서귀포시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seogwipo-si’\n\n\n\n\n\ncode\n‘39020’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제1-global-scale",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제1-global-scale",
-    "title": "13wk-1 draft",
-    "section": "예제1: global scale",
-    "text": "예제1: global scale\n\nm = folium.Map([36,128],zoom_start=7,scrollWheelZoom=False)\nfolium.Choropleth(geo_data=global_dict).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제2-local-scale",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제2-local-scale",
-    "title": "13wk-1 draft",
-    "section": "예제2: local scale",
-    "text": "예제2: local scale\n\nm = folium.Map([36,128],zoom_start=7,scrollWheelZoom=False)\nfolium.Choropleth(geo_data=local_dict).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제3-덕진구-완신구-시각화",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제3-덕진구-완신구-시각화",
-    "title": "13wk-1 draft",
-    "section": "예제3: 덕진구, 완신구 시각화",
-    "text": "예제3: 덕진구, 완신구 시각화\n- 전략:\n\nlocal_dict2 = local_dict.copy()\n\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(1,1,??,2) list\n\n\n\n\nproperties\nname\n‘종로구’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jongno-gu’\n\n\n\n\n\ncode\n‘11010’\n\n\n\n…\n…\n…\n…\n\n\n\n[249]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(10,1,??,2) list\n\n\n\n\nproperties\nname\n‘서귀포시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seogwipo-si’\n\n\n\n\n\ncode\n‘39020’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’\n\n\n\n\n- 실패(덕진구,완산구) \\(\\to\\) 해결(전주시덕진구,전주시완산구)\n\n_featrues = [local_dict['features'][i] for i in range(250) if local_dict['features'][i]['properties']['name'] == '전주시덕진구' or local_dict['features'][i]['properties']['name'] == '전주시완산구'] \nlocal_dict2['features'] = _features\n\n\n사실 이름저장이 어떤식으로 되어있는지 알기 어려움.. (‘덕진’,‘덕진구’,‘전주시 덕진구’, ‘전주시덕진구’)\n\n\nm = folium.Map([36,128],zoom_start=7,scrollWheelZoom=False)\nfolium.Choropleth(geo_data=local_dict2).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n- 좀 더 크게 + 위치조정 (전주시를 중심으로)\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nfolium.Choropleth(geo_data=local_dict2).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제1-덕진구-vs-완산구",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제1-덕진구-vs-완산구",
-    "title": "13wk-1 draft",
-    "section": "예제1: 덕진구 vs 완산구",
-    "text": "예제1: 덕진구 vs 완산구\n- 아래와 같은 그림에서 덕진구와 완산구의 어떠한 value를 비교하고 싶음 (카카오바이크 등)\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nfolium.Choropleth(geo_data=local_dict2).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n선실습\n\ndf = pd.DataFrame({'key':['전주시덕진구','전주시완산구'],'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      전주시덕진구\n      20\n    \n    \n      1\n      전주시완산구\n      30\n    \n  \n\n\n\n\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(1,1,??,2) list\n\n\n\n\nproperties\nname\n‘종로구’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jongno-gu’\n\n\n\n\n\ncode\n‘11010’\n\n\n\n…\n…\n…\n…\n\n\n\n[249]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(10,1,??,2) list\n\n\n\n\nproperties\nname\n‘서귀포시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seogwipo-si’\n\n\n\n\n\ncode\n‘39020’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’\n\n\n\n\n\n외우세요: folium.Choropleth 의 지역구의 이름이 저장된 경로를 찾아서 쓴다. 모든 경로를 쓸 필요는 없으며 우리 예제의 경우는 level_2 이하의 경로만 서술하면 된다.\n\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nchoro = folium.Choropleth(\n    geo_data=local_dict2,\n    data=df,     \n    columns=['key','value'], \n    key_on = 'properties.name' \n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n후설명\n이해를 위해 필요한 약간의 직관\n\n예비생각1: 코로플레스맵을 그리기 위해서는 항상 2개의 데이터를 연결해야하는 구조이다. 하나는 json에서 나온 dict (local_dict2), 다른하나는 이다.\n예비생각2: 두개의 데이터를 연결하기 위해서는 공유가능한 연결의 매개체가 필요하다. (cbind: row-index를 공유, rbind: colnames공유, merge: 양쪽 데이터프레임에서 같은 이름을 가진 특정 col이 있었음)\n예비생각3: 코로플레스맵의 연결매개체는 ‘완산구’, ’덕진구’와 같은 지역명이다.\n\nfolium.Choropleth() 에 사용될 변수들 상상해보기\n\n재료: 두개의 데이터 (json과 df)를 명시해야 한다.\n연결매개체: 두개의 데이터프레임을 연결하는 변수이름을 명시해야 한다.\n색깔표시: (지역명,value)와 같은 쌍을 전달해야 한다.\n\n\nlocal_dict2['features'][0]['properties']['name']\n\n'전주시완산구'\n\n\n사용방법\n\nchoro = folium.Choropleth(\n    geo_data=local_dict2, ## 자료1 \n    data=df,  ## 자료2 \n    columns=['key','value'], ## 색깔표현 \n    key_on = 'feature.properties.name' ## 연결의 매개체\n)\n\n\nlocal_dict2['features'][0]['properties']['name']\n\n'전주시완산구'"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#key_on-에-대한-이해",
-    "href": "posts/2022-11-28-13wk-1-draft.html#key_on-에-대한-이해",
-    "title": "13wk-1 draft",
-    "section": "key_on 에 대한 이해",
-    "text": "key_on 에 대한 이해\n\n사용예시1: 한글이름으로 key_on\n\nlocal_dict2['features'][0]['properties']['name_eng']\n\n'Jeonjusiwansangu'\n\n\n\ndf = pd.DataFrame({'key':['전주시덕진구','Jeonjusiwansangu'],'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      전주시덕진구\n      20\n    \n    \n      1\n      Jeonjusiwansangu\n      30\n    \n  \n\n\n\n\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nchoro = folium.Choropleth(\n    data=df, \n    geo_data=local_dict2,\n    columns=['key','value'],\n    key_on = 'feature.properties.name'\n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n사용예시2: 영어이름으로 key_on\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nchoro = folium.Choropleth(\n    data=df, \n    geo_data=local_dict2,\n    columns=['key','value'],\n    key_on = 'feature.properties.name_eng'\n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n사용예시3: 코드로 key_on\n\nlocal_dict2['features'][0]['properties']\n\n{'name': '전주시완산구',\n 'base_year': '2018',\n 'name_eng': 'Jeonjusiwansangu',\n 'code': '35011'}\n\n\n\nlocal_dict2['features'][1]['properties']\n\n{'name': '전주시덕진구',\n 'base_year': '2018',\n 'name_eng': 'Jeonjusideokjingu',\n 'code': '35012'}\n\n\n\ndf = pd.DataFrame({'key':['35012','35011'],'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      35012\n      20\n    \n    \n      1\n      35011\n      30\n    \n  \n\n\n\n\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=11,scrollWheelZoom=False)\nchoro = folium.Choropleth(\n    data=df, \n    geo_data=local_dict2,\n    columns=['key','value'],\n    key_on = 'feature.properties.code'\n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제2-대한민국-인구수-시각화-global-scale",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제2-대한민국-인구수-시각화-global-scale",
-    "title": "13wk-1 draft",
-    "section": "예제2: 대한민국 인구수 시각화 (global scale)",
-    "text": "예제2: 대한민국 인구수 시각화 (global scale)\n\ndf=pd.read_csv('https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv')\ndf\n\n\n\n\n\n  \n    \n      \n      행정구역(시군구)별\n      총인구수 (명)\n    \n  \n  \n    \n      0\n      서울특별시\n      9532428\n    \n    \n      1\n      부산광역시\n      3356311\n    \n    \n      2\n      대구광역시\n      2390721\n    \n    \n      3\n      인천광역시\n      2945009\n    \n    \n      4\n      광주광역시\n      1442454\n    \n    \n      5\n      대전광역시\n      1454228\n    \n    \n      6\n      울산광역시\n      1122566\n    \n    \n      7\n      세종특별자치시\n      368276\n    \n    \n      8\n      경기도\n      13549577\n    \n    \n      9\n      강원도\n      1537717\n    \n    \n      10\n      충청북도\n      1596948\n    \n    \n      11\n      충청남도\n      2118977\n    \n    \n      12\n      전라북도\n      1789770\n    \n    \n      13\n      전라남도\n      1834653\n    \n    \n      14\n      경상북도\n      2627925\n    \n    \n      15\n      경상남도\n      3318161\n    \n    \n      16\n      제주특별자치도\n      676569\n    \n  \n\n\n\n\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=7,scrollWheelZoom=False)\nchoro= folium.Choropleth(\n    data=df, \n    geo_data= global_dict, \n    columns=['행정구역(시군구)별','총인구수 (명)'], \n    key_on='feature.properties.name'\n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
-    "objectID": "posts/2022-11-28-13wk-1-draft.html#예제3-대한민국-인구수-시각화-local-scale",
-    "href": "posts/2022-11-28-13wk-1-draft.html#예제3-대한민국-인구수-시각화-local-scale",
-    "title": "13wk-1 draft",
-    "section": "예제3: 대한민국 인구수 시각화 (local scale)",
-    "text": "예제3: 대한민국 인구수 시각화 (local scale)\n\ndf=pd.read_csv('https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-muni.csv')\ndf\n\n\n\n\n\n  \n    \n      \n      행정구역(시군구)별\n      총인구수 (명)\n    \n  \n  \n    \n      0\n      종로구\n      145346\n    \n    \n      1\n      중구\n      122781\n    \n    \n      2\n      용산구\n      223713\n    \n    \n      3\n      성동구\n      287174\n    \n    \n      4\n      광진구\n      340814\n    \n    \n      ...\n      ...\n      ...\n    \n    \n      269\n      함양군\n      38475\n    \n    \n      270\n      거창군\n      61242\n    \n    \n      271\n      합천군\n      43029\n    \n    \n      272\n      제주시\n      493225\n    \n    \n      273\n      서귀포시\n      183344\n    \n  \n\n274 rows × 2 columns\n\n\n\n\nm = folium.Map([35.84195368311022, 127.1155556693179],zoom_start=7,scrollWheelZoom=False)\nchoro= folium.Choropleth(\n    data=df, \n    geo_data= local_dict, \n    columns=['행정구역(시군구)별','총인구수 (명)'], \n    key_on='feature.properties.name'\n)\nchoro.add_to(m) \nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
-  },
-  {
     "objectID": "posts/2022-11-02-9wk-2.html",
     "href": "posts/2022-11-02-9wk-2.html",
     "title": "09wk-2",
@@ -1624,11 +1540,95 @@
     "text": "Toy exam\n- 교재의 예제상황은 예를들면 아래와 같다.\n(숨은진짜상황1)\n\\[\\text{아이스크림 판매량} = 20 + 2 \\times \\text{온도} + \\epsilon\\]\n\nnp.random.seed(1) \ntemp= np.array([-10.2, -5.2, 0.1, 10.1, 12.2, 14.7, \n                25.4, 26.8, 28.9, 35.1, 32.2, 34.6])\neps= np.random.normal(size=12,scale=5)\nicecream= 20 + temp * 2 + eps\n\n\nplt.plot(temp,icecream,'.')\n\n\n\n\n\n온도와 아이스크림 판매량의 산점도\n\n(숨은진짜상황2)\n\\[\\text{소아마비 반응수치} = 30 + 0.5 \\times \\text{온도} + \\epsilon\\] - 좌변은 소아마비임을 나타내는 어떠한 반응수치라고 생각하자.\n\nnp.random.seed(2) \neps = np.random.normal(size=12,scale=5) \ndisease = 30+ temp* 0.5 + eps\n\n\nplt.plot(temp,disease,'.')\n\n\n\n\n\n온도와 소아마비의 산점도\n\n(우리가 데이터로부터 관측한 상황)\n- 아이스크림과 질병의 산점도를 그려보자.\n\nplt.plot(icecream,disease,'.')\n\n\n\n\n\n양의 상관관계에 있다.\n\n- 아이스크림 중 어떠한 물질이 소아마비를 일으키는것이 분명하므로 (인과성이 분명해보이니까) 아래와 같은 모형을 세우자. <– 여기서부터 틀렸음\n\\[{\\tt disease}_i =\\beta_0 +\\beta_1 {\\tt icecream}_i +\\epsilon_i,\\quad \\textbf{for} ~~ i=1,2,\\dots, 12\\]\n- 적절한 \\(\\beta_0\\)와 \\(\\beta_1\\)을 추정하면 우리는 아이스크림과 소아마비의 관계를 알 수 있다. <– 틀린주장\n\n틀린 모형\n도데체 우리가 뭘 잘못했는가?\n\n- 두 변수 사이에 상관관계가 있어도 실제 원인은 다른 변수에 숨겨져 있는 경우가 많다.\n(ex1)\n\n온도 \\(\\to\\) 익사\n온도 \\(\\to\\) 아이스크림\n아이스크림과 익사자도 양의 상관관계에 있을것이다.\n아이스크림을 먹이면 물에 빠져 죽는다 \\(\\to\\) 틀린주장\n사실 기온이 숨겨진 원인이다. 기온이 증가하면 아이스크림 판매량도 증가하고 폭염때문에 익사사고율도 높아지는 구조이다.\n\n(ex2)\n\n인구수 \\(\\to\\) 교회\n인구수 \\(\\to\\) 범죄건수\n지역별 교회와 범죄건수를 살펴보면 상관관계가 높게 나올것임\n교회를 지으면 범죄건수도 증가한다? \\(\\to\\) 틀린주장\n사실 인구가 숨겨진 요인임\n\n- ex2, ex1에 대하여 바른 분석을 하려면?\n\nex2: 인구가 비슷한 도시끼리 묶어서 비교해보면 교회와 범죄의 건수는 양의 상관관계에 있지 않을것임\nex1: 온도가 비슷한 그룹끼리 묶어보자.\n\n- 올바른 분석: 온도가 비슷한 그룹끼리 묶어서 그려보자. \\(\\to\\) 상관계수가 줄어들 것이다.\n\nplt.plot(icecream[:6],disease[:6],'.')\n\n\n\n\n\nplt.plot(icecream[6:],disease[6:],'.')\n\n\n\n\n\n진짜로 선형관계가 약해졌다.."
   },
   {
+    "objectID": "posts/2022-11-28-13wk-1.html",
+    "href": "posts/2022-11-28-13wk-1.html",
+    "title": "13wk-1",
+    "section": "",
+    "text": "Choropleth– json 파일 뜯어보기, folium.Choropleth를 이용한 시각화 I, folium.Choropleth를 이용한 시각화 II"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#folium.polygon",
+    "href": "posts/2022-11-28-13wk-1.html#folium.polygon",
+    "title": "13wk-1",
+    "section": "folium.Polygon",
+    "text": "folium.Polygon\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8468,127.1294], # 분수대\n    zoom_start=18,\n)\nfolium.Marker(\n    location = [35.8471, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.1289]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1291]\n).add_to(m)\nfolium.Marker(\n    location = [35.84635, 127.1297]\n).add_to(m)\nfolium.Marker(\n    location = [35.8468, 127.12995]\n).add_to(m)\nfolium.Marker(\n    location = [35.8474, 127.1300]\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8468,127.1294], # 분수대\n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\nm = folium.Map(\n    scrollWheelZoom=False,\n    location = [35.8468,127.1294], # 분수대\n    zoom_start=18,\n)\nfolium.Polygon(\n    locations = [[[35.8471, 127.1291],\n                 [35.8468, 127.1289],\n                 [35.84635, 127.1291],\n                 [35.84635, 127.1297],\n                 [35.8468, 127.12995],\n                 [35.8474, 127.1300]],\n                 \n                 [[ 35.8471 , 127.1302],\n                 [ 35.8468 , 127.1300],\n                 [ 35.84635, 127.1302],\n                 [ 35.84635, 127.1308],\n                 [ 35.8468 , 127.13105],\n                 [ 35.8474 , 127.1311]]],\n    fill=True\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#dict-view-vs-copy",
+    "href": "posts/2022-11-28-13wk-1.html#dict-view-vs-copy",
+    "title": "13wk-1",
+    "section": "dict: view vs copy",
+    "text": "dict: view vs copy\n- 원하지 않는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1 \ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 9999}, {'a': 1, 'b': 2, 'c': 9999})\n\n\n- 원하는 코드\n\ndct1= {'a':1, 'b':2, 'c':3}\ndct1\n\n{'a': 1, 'b': 2, 'c': 3}\n\n\n\ndct2 = dct1.copy()\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 3})\n\n\n\ndct2['c']=9999\ndct1,dct2\n\n({'a': 1, 'b': 2, 'c': 3}, {'a': 1, 'b': 2, 'c': 9999})"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#json-파일-다운로드",
+    "href": "posts/2022-11-28-13wk-1.html#json-파일-다운로드",
+    "title": "13wk-1",
+    "section": "json 파일 다운로드",
+    "text": "json 파일 다운로드\n\nglobal_dict = json.loads(requests.get('https://raw.githubusercontent.com/southkorea/southkorea-maps/master/kostat/2018/json/skorea-provinces-2018-geo.json').text)\nlocal_dict = json.loads(requests.get('https://raw.githubusercontent.com/southkorea/southkorea-maps/master/kostat/2018/json/skorea-municipalities-2018-geo.json').text)"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#json-파일의-구조",
+    "href": "posts/2022-11-28-13wk-1.html#json-파일의-구조",
+    "title": "13wk-1",
+    "section": "json 파일의 구조",
+    "text": "json 파일의 구조\n- global_dict의 구조를 살펴보면 아래와 같음\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘Polygon’\n\n\n\n\n\ncoordinates\n(1,??,2) list\n\n\n\n\nproperties\nname\n‘서울특별시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seoul’\n\n\n\n\n\ncode\n‘11’\n\n\n\n…\n…\n…\n…\n\n\n\n[16]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(6,1,??,2) list\n\n\n\n\nproperties\nname\n‘’제주특별자치도’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jeju-do’\n\n\n\n\n\ncode\n‘39’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’\n\n\n\n\n- local_dict의 구조를 살펴보면 아래와 같음\n\n\n\nlevel_0\nlevel_1\nlevel_2\nlevel3\nlevel4\n\n\n\n\ntype\n‘FeatureCollection’\n\n\n\n\n\nfeatures\n[0]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(1,1,??,2) list\n\n\n\n\nproperties\nname\n‘종로구’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Jongno-gu’\n\n\n\n\n\ncode\n‘11010’\n\n\n\n…\n…\n…\n…\n\n\n\n[249]\ntype\n‘Feature’\n\n\n\n\n\ngeometry\ntype\n‘MultiPolygon’\n\n\n\n\n\ncoordinates\n(10,1,??,2) list\n\n\n\n\nproperties\nname\n‘서귀포시’\n\n\n\n\n\nbase_year\n‘2018’\n\n\n\n\n\nname_eng\n‘Seogwipo-si’\n\n\n\n\n\ncode\n‘39020’\n\n\nname\n‘sido’\n\n\n\n\n\ncrs\ntype\n‘name’\n\n\n\n\n\nproperties\nname\n‘urn:ogc:def:crs:OGC:1.3:CRS84’"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제1-global-scale",
+    "href": "posts/2022-11-28-13wk-1.html#예제1-global-scale",
+    "title": "13wk-1",
+    "section": "예제1: global scale",
+    "text": "예제1: global scale\n\nm = folium.Map(\n    location = [36,128],\n    zoom_start=7,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=global_dict\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제2-local-scale",
+    "href": "posts/2022-11-28-13wk-1.html#예제2-local-scale",
+    "title": "13wk-1",
+    "section": "예제2: local scale",
+    "text": "예제2: local scale\n\nm = folium.Map(\n    location = [36,128],\n    zoom_start=7,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제3-덕진구-완신구-시각화",
+    "href": "posts/2022-11-28-13wk-1.html#예제3-덕진구-완신구-시각화",
+    "title": "13wk-1",
+    "section": "예제3: 덕진구, 완신구 시각화",
+    "text": "예제3: 덕진구, 완신구 시각화\n\nlocal_dict2 = local_dict.copy() \n\n\n_features = [local_dict['features'][i] for i in range(250) if local_dict['features'][i]['properties']['name'] == '전주시덕진구' or local_dict['features'][i]['properties']['name'] == '전주시완산구']\nlocal_dict2['features'] = _features\n\n\nm = folium.Map(\n    location = [35.84195368311022, 127.1155556693179],\n    zoom_start=11,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict2\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제1-덕진구-vs-완산구",
+    "href": "posts/2022-11-28-13wk-1.html#예제1-덕진구-vs-완산구",
+    "title": "13wk-1",
+    "section": "예제1: 덕진구 vs 완산구",
+    "text": "예제1: 덕진구 vs 완산구\n\n선실습\n\ndf = pd.DataFrame({'key':['전주시덕진구', '전주시완산구'], 'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      전주시덕진구\n      20\n    \n    \n      1\n      전주시완산구\n      30\n    \n  \n\n\n\n\n\nm = folium.Map(\n    location = [35.84195368311022, 127.1155556693179],\n    zoom_start=11,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict2,\n    data=df,\n    columns=['key','value'],\n    key_on='properties.name',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n후설명\n이해를 위해 필요한 약간의 직관\n\n예비생각1: 코로플레스맵을 그리기 위해서는 항상 2개의 데이터를 연결해야하는 구조이다. 하나는 json에서 나온 dict (local_dict2), 다른하나는 이다.\n예비생각2: 두개의 데이터를 연결하기 위해서는 공유가능한 연결의 매개체가 필요하다. (cbind: row-index를 공유, rbind: colnames공유, merge: 양쪽 데이터프레임에서 같은 이름을 가진 특정 col이 있었음)\n예비생각3: 코로플레스맵의 연결매개체는 ‘완산구’, ’덕진구’와 같은 지역명이다.\n\nfolium.Choropleth() 에 사용될 변수들 상상해보기\n\n재료: 두개의 데이터 (json과 df)를 명시해야 한다.\n연결매개체: 두개의 데이터프레임을 연결하는 변수이름을 명시해야 한다.\n색깔표시: (지역명,value)와 같은 쌍을 전달해야 한다."
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#key_on-에-대한-이해",
+    "href": "posts/2022-11-28-13wk-1.html#key_on-에-대한-이해",
+    "title": "13wk-1",
+    "section": "key_on 에 대한 이해",
+    "text": "key_on 에 대한 이해\n\n사용예시1: 한글이름으로 key_on\n\ndf = pd.DataFrame({'key':['전주시덕진구', 'Jeonjusiwansangu'], 'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      전주시덕진구\n      20\n    \n    \n      1\n      Jeonjusiwansangu\n      30\n    \n  \n\n\n\n\n\nm = folium.Map(\n    location = [35.84195368311022, 127.1155556693179],\n    zoom_start=11,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict2,\n    data=df,\n    columns=['key','value'],\n    key_on='properties.name',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n사용예시2: 영어이름으로 key_on\n\ndf = pd.DataFrame({'key':['전주시덕진구', 'Jeonjusiwansangu'], 'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      key\n      value\n    \n  \n  \n    \n      0\n      전주시덕진구\n      20\n    \n    \n      1\n      Jeonjusiwansangu\n      30\n    \n  \n\n\n\n\n\nm = folium.Map(\n    location = [35.84195368311022, 127.1155556693179],\n    zoom_start=11,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict2,\n    data=df,\n    columns=['key','value'],\n    key_on='properties.name_eng',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook\n\n\n\n\n사용예시3: 코드로 key_on\n\nlocal_dict2['features'][0]['properties'], local_dict2['features'][1]['properties']\n\n({'name': '전주시완산구',\n  'base_year': '2018',\n  'name_eng': 'Jeonjusiwansangu',\n  'code': '35011'},\n {'name': '전주시덕진구',\n  'base_year': '2018',\n  'name_eng': 'Jeonjusideokjingu',\n  'code': '35012'})\n\n\n\ndf = pd.DataFrame({'code':['35012', '35011'], 'value':[20,30]})\ndf\n\n\n\n\n\n  \n    \n      \n      code\n      value\n    \n  \n  \n    \n      0\n      35012\n      20\n    \n    \n      1\n      35011\n      30\n    \n  \n\n\n\n\n\nm = folium.Map(\n    location = [35.84195368311022, 127.1155556693179],\n    zoom_start=11,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict2,\n    data=df,\n    columns=['code','value'],\n    key_on='properties.code',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제2-대한민국-인구수-시각화-global-scale",
+    "href": "posts/2022-11-28-13wk-1.html#예제2-대한민국-인구수-시각화-global-scale",
+    "title": "13wk-1",
+    "section": "예제2: 대한민국 인구수 시각화 (global scale)",
+    "text": "예제2: 대한민국 인구수 시각화 (global scale)\n\ndf=pd.read_csv('https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-prov.csv')\ndf\n\n\n\n\n\n  \n    \n      \n      행정구역(시군구)별\n      총인구수 (명)\n    \n  \n  \n    \n      0\n      서울특별시\n      9532428\n    \n    \n      1\n      부산광역시\n      3356311\n    \n    \n      2\n      대구광역시\n      2390721\n    \n    \n      3\n      인천광역시\n      2945009\n    \n    \n      4\n      광주광역시\n      1442454\n    \n    \n      5\n      대전광역시\n      1454228\n    \n    \n      6\n      울산광역시\n      1122566\n    \n    \n      7\n      세종특별자치시\n      368276\n    \n    \n      8\n      경기도\n      13549577\n    \n    \n      9\n      강원도\n      1537717\n    \n    \n      10\n      충청북도\n      1596948\n    \n    \n      11\n      충청남도\n      2118977\n    \n    \n      12\n      전라북도\n      1789770\n    \n    \n      13\n      전라남도\n      1834653\n    \n    \n      14\n      경상북도\n      2627925\n    \n    \n      15\n      경상남도\n      3318161\n    \n    \n      16\n      제주특별자치도\n      676569\n    \n  \n\n\n\n\n\nm = folium.Map(\n    location = [36,128],\n    zoom_start=7,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=global_dict,\n    data=df,\n    columns=['행정구역(시군구)별','총인구수 (명)'],\n    key_on='properties.name',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
+    "objectID": "posts/2022-11-28-13wk-1.html#예제3-대한민국-인구수-시각화-local-scale",
+    "href": "posts/2022-11-28-13wk-1.html#예제3-대한민국-인구수-시각화-local-scale",
+    "title": "13wk-1",
+    "section": "예제3: 대한민국 인구수 시각화 (local scale)",
+    "text": "예제3: 대한민국 인구수 시각화 (local scale)\n\ndf=pd.read_csv('https://raw.githubusercontent.com/guebin/2021DV/master/_notebooks/2021-11-22-muni.csv')\ndf\n\n\n\n\n\n  \n    \n      \n      행정구역(시군구)별\n      총인구수 (명)\n    \n  \n  \n    \n      0\n      종로구\n      145346\n    \n    \n      1\n      중구\n      122781\n    \n    \n      2\n      용산구\n      223713\n    \n    \n      3\n      성동구\n      287174\n    \n    \n      4\n      광진구\n      340814\n    \n    \n      ...\n      ...\n      ...\n    \n    \n      269\n      함양군\n      38475\n    \n    \n      270\n      거창군\n      61242\n    \n    \n      271\n      합천군\n      43029\n    \n    \n      272\n      제주시\n      493225\n    \n    \n      273\n      서귀포시\n      183344\n    \n  \n\n274 rows × 2 columns\n\n\n\n\nm = folium.Map(\n    location = [36,128],\n    zoom_start=7,\n    scrollWheelZoom = False\n)\nfolium.Choropleth(\n    geo_data=local_dict,\n    data=df,\n    columns=['행정구역(시군구)별','총인구수 (명)'],\n    key_on='properties.name',\n).add_to(m)\nm\n\nMake this Notebook Trusted to load map: File -> Trust Notebook"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "데이터시각화(2022)",
     "section": "",
-    "text": "13wk-2 draft\n\n\n\n\n\n\n\n지리정보시각화\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13wk-1 draft\n\n\n\n\n\n\n\n지리정보시각화\n\n\nfolium\n\n\n\n\n\n\n\n\n\n\n\nNov 28, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12wk-2\n\n\n\n\n\n\n\n지리정보시각화\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12wk-1\n\n\n\n\n\n\n\n지리정보시각화\n\n\nfolium\n\n\n\n\n\n\n\n\n\n\n\nNov 21, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11wk-2\n\n\n\n\n\n\n\n자료분석\n\n\npandas backend\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11wk-1\n\n\n\n\n\n\n\npandas backend\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10wk-1\n\n\n\n\n\n\n\npandas\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nNov 7, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n09wk-2\n\n\n\n\n\n\n\n훌륭한 시각화\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmidterm\n\n\n\n\n\n\n\n\n\n\n\n\nOct 30, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n08wk-1,2\n\n\n\n\n\n\n\npandas\n\n\n자료분석\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n07wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n07wk-1\n\n\n\n\n\n\n\npandas\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nOct 17, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n06wk-1,2\n\n\n\n\n\n\n\npandas\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n05wk-2\n\n\n\n\n\n\n\n훌륭한 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05wk-1\n\n\n\n\n\n\n\nseaborn\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04wk-2\n\n\n\n\n\n\n\nseaborn\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03wk-2\n\n\n\n\n\n\n\nmatplotlib\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n03wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\nseaborn\n\n\nplotnine\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nSep 10, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA1: tips for matploblib\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\n최규빈\n\n\n\n\n\n\nNo matching items"
+    "text": "13wk-2 draft\n\n\n\n\n\n\n\n지리정보시각화\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13wk-1\n\n\n\n\n\n\n\n지리정보시각화\n\n\nfolium\n\n\n\n\n\n\n\n\n\n\n\nNov 28, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12wk-2\n\n\n\n\n\n\n\n지리정보시각화\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 23, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12wk-1\n\n\n\n\n\n\n\n지리정보시각화\n\n\nfolium\n\n\n\n\n\n\n\n\n\n\n\nNov 21, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11wk-2\n\n\n\n\n\n\n\n자료분석\n\n\npandas backend\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11wk-1\n\n\n\n\n\n\n\npandas backend\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10wk-1\n\n\n\n\n\n\n\npandas\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nNov 7, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n09wk-2\n\n\n\n\n\n\n\n훌륭한 시각화\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmidterm\n\n\n\n\n\n\n\n\n\n\n\n\nOct 30, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n08wk-1,2\n\n\n\n\n\n\n\npandas\n\n\n자료분석\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n07wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n07wk-1\n\n\n\n\n\n\n\npandas\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nOct 17, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n06wk-1,2\n\n\n\n\n\n\n\npandas\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n05wk-2\n\n\n\n\n\n\n\n훌륭한 시각화\n\n\nplotnine\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n05wk-1\n\n\n\n\n\n\n\nseaborn\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04wk-2\n\n\n\n\n\n\n\nseaborn\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n04wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n03wk-2\n\n\n\n\n\n\n\nmatplotlib\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\n최규빈\n\n\n\n\n\n\n  \n\n\n\n\n03wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n02wk-2\n\n\n\n\n\n\n\n통계와 시각화\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n01wk-1\n\n\n\n\n\n\n\nmatplotlib\n\n\nseaborn\n\n\nplotnine\n\n\nplotly\n\n\n\n\n\n\n\n\n\n\n\nSep 10, 2022\n\n\n최규빈\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA1: tips for matploblib\n\n\n\n\n\n\n\nmatplotlib\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\n최규빈\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
