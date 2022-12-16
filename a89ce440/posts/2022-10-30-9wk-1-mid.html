@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2022-10-30">
+
+<title>DV2022 - midterm</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DV2022</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/DV2022/tree/main/posts"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">midterm</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>최규빈 </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 30, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#시각화의-해석---다음을-잘-읽고-물음에-답하라.-20점" id="toc-시각화의-해석---다음을-잘-읽고-물음에-답하라.-20점" class="nav-link active" data-scroll-target="#시각화의-해석---다음을-잘-읽고-물음에-답하라.-20점"><code>1</code>. 시각화의 해석 - 다음을 잘 읽고 물음에 답하라. (20점)</a></li>
+  <li><a href="#시각화구현-i---다음을-잘-읽고-물음에-답하라.-10점" id="toc-시각화구현-i---다음을-잘-읽고-물음에-답하라.-10점" class="nav-link" data-scroll-target="#시각화구현-i---다음을-잘-읽고-물음에-답하라.-10점"><code>2</code>. 시각화구현 I - 다음을 잘 읽고 물음에 답하라. (10점)</a></li>
+  <li><a href="#시각화구현-ii-다음을-잘-읽고-물음에-답하라.-10점" id="toc-시각화구현-ii-다음을-잘-읽고-물음에-답하라.-10점" class="nav-link" data-scroll-target="#시각화구현-ii-다음을-잘-읽고-물음에-답하라.-10점"><code>3</code>. 시각화구현 II – 다음을 잘 읽고 물음에 답하라. (10점)</a></li>
+  <li><a href="#자료분석-및-시각화-i-40점-fifa22자료" id="toc-자료분석-및-시각화-i-40점-fifa22자료" class="nav-link" data-scroll-target="#자료분석-및-시각화-i-40점-fifa22자료"><code>4</code>. 자료분석 및 시각화 I (40점) – FIFA22자료</a></li>
+  <li><a href="#자료분석-및-시각화-ii-20점-hrdataset_v14" id="toc-자료분석-및-시각화-ii-20점-hrdataset_v14" class="nav-link" data-scroll-target="#자료분석-및-시각화-ii-20점-hrdataset_v14"><code>5</code>. 자료분석 및 시각화 II (20점) – HRDataset_v14</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<blockquote class="blockquote">
+<p>중간고사</p>
+</blockquote>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="시각화의-해석---다음을-잘-읽고-물음에-답하라.-20점" class="level2">
+<h2 class="anchored" data-anchor-id="시각화의-해석---다음을-잘-읽고-물음에-답하라.-20점"><code>1</code>. 시각화의 해석 - 다음을 잘 읽고 물음에 답하라. (20점)</h2>
+<p><code>(1)</code> 아래의 그림을 보고 올바르게 해석한 것을 고르라. (모두 맞출경우만 정답으로 인정)</p>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#hide_input</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>x <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">14</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">12</span>, <span class="dv">7</span>, <span class="dv">5</span>]</span>
+<span id="cb2-3"><a href="#cb2-3"></a>y1 <span class="op">=</span> [<span class="fl">8.04</span>, <span class="fl">6.95</span>, <span class="fl">7.58</span>, <span class="fl">8.81</span>, <span class="fl">8.33</span>, <span class="fl">9.96</span>, <span class="fl">7.24</span>, <span class="fl">4.26</span>, <span class="fl">10.84</span>, <span class="fl">4.82</span>, <span class="fl">5.68</span>]</span>
+<span id="cb2-4"><a href="#cb2-4"></a>y2 <span class="op">=</span> [<span class="fl">9.14</span>, <span class="fl">8.14</span>, <span class="fl">8.74</span>, <span class="fl">8.77</span>, <span class="fl">9.26</span>, <span class="fl">8.10</span>, <span class="fl">6.13</span>, <span class="fl">3.10</span>, <span class="fl">9.13</span>, <span class="fl">7.26</span>, <span class="fl">4.74</span>]</span>
+<span id="cb2-5"><a href="#cb2-5"></a>y3 <span class="op">=</span> [<span class="fl">7.46</span>, <span class="fl">6.77</span>, <span class="fl">12.74</span>, <span class="fl">7.11</span>, <span class="fl">7.81</span>, <span class="fl">8.84</span>, <span class="fl">6.08</span>, <span class="fl">5.39</span>, <span class="fl">8.15</span>, <span class="fl">6.42</span>, <span class="fl">5.73</span>]</span>
+<span id="cb2-6"><a href="#cb2-6"></a>x4 <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">19</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>]</span>
+<span id="cb2-7"><a href="#cb2-7"></a>y4 <span class="op">=</span> [<span class="fl">6.58</span>, <span class="fl">5.76</span>, <span class="fl">7.71</span>, <span class="fl">8.84</span>, <span class="fl">8.47</span>, <span class="fl">7.04</span>, <span class="fl">5.25</span>, <span class="fl">12.50</span>, <span class="fl">5.56</span>, <span class="fl">7.91</span>, <span class="fl">6.89</span>]</span>
+<span id="cb2-8"><a href="#cb2-8"></a>fig, ((ax1,ax2),(ax3,ax4)) <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>ax1.plot(x,y1,<span class="st">'.'</span>) </span>
+<span id="cb2-10"><a href="#cb2-10"></a>ax1.set_title(<span class="st">"(a)"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11"></a>ax2.plot(x,y2,<span class="st">'.'</span>) </span>
+<span id="cb2-12"><a href="#cb2-12"></a>ax2.set_title(<span class="st">"(b)"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a>ax3.plot(x,y3,<span class="st">'.'</span>)<span class="op">;</span> ax3.plot(x[<span class="dv">2</span>],y3[<span class="dv">2</span>],<span class="st">'o'</span>,color<span class="op">=</span><span class="st">'C1'</span>) </span>
+<span id="cb2-14"><a href="#cb2-14"></a>ax3.set_title(<span class="st">"(c)"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a>ax4.plot(x4,y4,<span class="st">'.'</span>)<span class="op">;</span> ax4.plot(x4[<span class="op">-</span><span class="dv">4</span>],y4[<span class="op">-</span><span class="dv">4</span>],<span class="st">'o'</span>,color<span class="op">=</span><span class="st">'C1'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>ax4.set_title(<span class="st">"(d)"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>fig.suptitle(<span class="st">"Anscombe's quartet"</span>,size<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb2-18"><a href="#cb2-18"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>소윤: (a)의 경우 <span class="math inline">\((x_i,y_i)\)</span>의 산점도가 직선형태이므로 표본상관계수의 값을 해석하는 것이 두 자료의 관계를 파악할때 도움을 준다.</li>
+<li>다호: (b)의 경우 <span class="math inline">\((x_i,y_i)\)</span>의 산점도가 이차곡선이므로 표본상관계수의 해석으로 두 자료의 관계를 모두 파악할 수 없다.</li>
+<li>하니: (c)의 경우 주황색으로 표시된 점을 제외한다면 표본상관계수로 자료를 해석하기에 바람직하다.</li>
+<li>도한: (d)도 (c)와 마찬가지로 주황색으로 표시된 점을 제외한다면 표본상관계수로 자료를 해석하기에 바람직하다.</li>
+</ul>
+<p>(풀이)</p>
+<ul>
+<li>정답: 소윤, 다호, 하니가 맞게 서술함.</li>
+<li>도한이 틀린이유: 주황색점을 제외할 경우 <span class="math inline">\(x\)</span>의 변화량이 0이므로 분모가 0으로 수렴. 따라서 상관계수의 해석이 무의미하다.</li>
+</ul>
+<p><code>(2)</code> 아래의 그림을 보고 올바르게 해석한 것을 모두 고르라. (모두 맞출경우만 정답으로 인정) - 그림에 대한 배경설명은 10월17일,19일의 “아이스크림을 많이 먹으면 걸리는 병”을 참고</p>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#hide_input</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>df<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/icecream.csv'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>ggplot(data<span class="op">=</span>df.assign(temp<span class="op">=</span>pd.cut(df.temp,[<span class="op">-</span>np.inf,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">25</span>,<span class="dv">30</span>,np.inf])))<span class="op">\</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">+</span>geom_point(aes(x<span class="op">=</span><span class="st">'icecream'</span>,y<span class="op">=</span><span class="st">'disease'</span>,color<span class="op">=</span><span class="st">'temp'</span>))<span class="op">\</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="op">+</span>geom_smooth(aes(x<span class="op">=</span><span class="st">'icecream'</span>,y<span class="op">=</span><span class="st">'disease'</span>,color<span class="op">=</span><span class="st">'temp'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/home/cgb4/anaconda3/envs/py37/lib/python3.7/site-packages/plotnine/stats/smoothers.py:311: PlotnineWarning: Confidence intervals are not yet implementedfor lowess smoothings.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-4-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="72">
+<pre><code>&lt;ggplot: (8776319243321)&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li>소윤: 아이스크림과 소아마비는 상관계수는 양수이다.</li>
+<li>다호: 상관계수가 양수라는 정보만으로는 소아마비와 아이스크림사이에 인과성이 있다고 주장하기 어렵다.</li>
+<li>하니: 소아마비와 아이스크림 사이에 존재하는 은닉변수 온도를 통제한다면 소아마비와 아이스크림 사이의 상관계수는 0에 가깝다.</li>
+<li>도한: 하니의 분석에 따르면 소아마비와 아이스크림 사이의 인과성은 없다고 보아야 한다. (단 소아마비와 아이스크림 사이의 은닉된 변수는 온도가 유일하다고 가정한다)</li>
+</ul>
+<p>(풀이)</p>
+<ul>
+<li>정답: 소윤, 다호, 하니, 도한 모두 맞게 서술함</li>
+</ul>
+</section>
+<section id="시각화구현-i---다음을-잘-읽고-물음에-답하라.-10점" class="level2">
+<h2 class="anchored" data-anchor-id="시각화구현-i---다음을-잘-읽고-물음에-답하라.-10점"><code>2</code>. 시각화구현 I - 다음을 잘 읽고 물음에 답하라. (10점)</h2>
+<p><code>(1)</code>~<code>(3)</code> 주어진 자료에 대하여 다음을 시각화 하라. (maplotlib 이용)</p>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>x<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
+<span id="cb6-2"><a href="#cb6-2"></a>y<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>(1)</code> 출제의도: 마커변경, 색깔변경</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>plt.plot(x,y,<span class="st">'x'</span>,color<span class="op">=</span><span class="st">'C1'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>채점기준: 색깔이 정확하게 일치하지 않을 경우 0점으로 처리</li>
+</ul>
+<p><code>(2)</code> 출제의도: title설정</p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>plt.plot(x,y,)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>plt.title(<span class="st">'TITLE'</span>,size<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p><code>(3)</code> 출제의도: linetype 변경, dot connected-plot</p>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>plt.plot(x,y,<span class="st">'or--'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<hr>
+<p><code>(4)</code> ~ <code>(5)</code> 주어진 자료에 대하여 다음을 시각화 하라.</p>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>x<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
+<span id="cb10-2"><a href="#cb10-2"></a>y1<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">3</span>]</span>
+<span id="cb10-3"><a href="#cb10-3"></a>y2<span class="op">=</span>[<span class="fl">1.1</span>,<span class="fl">1.9</span>,<span class="dv">3</span>,<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>(4)</code> 출제의도: legend</p>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>plt.plot(x,y1,<span class="st">'o--'</span>,label<span class="op">=</span><span class="st">'y1'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a>plt.plot(x,y2,<span class="st">'o--'</span>,label<span class="op">=</span><span class="st">'y2'</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a>plt.legend()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p><code>(5)</code> 출제의도: linetype, linewidth 변경</p>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>fig,ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb12-2"><a href="#cb12-2"></a>ax[<span class="dv">0</span>].plot(x,y1,<span class="st">'--'</span>,lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb12-3"><a href="#cb12-3"></a>ax[<span class="dv">1</span>].plot(x,y2,<span class="st">'--'</span>,lw<span class="op">=</span><span class="dv">4</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>채점기준: 선의두께가 예시와 조금 달라도 만점으로 인정 (두께의 변화만 있으면 정답으로 인정함)</li>
+</ul>
+</section>
+<section id="시각화구현-ii-다음을-잘-읽고-물음에-답하라.-10점" class="level2">
+<h2 class="anchored" data-anchor-id="시각화구현-ii-다음을-잘-읽고-물음에-답하라.-10점"><code>3</code>. 시각화구현 II – 다음을 잘 읽고 물음에 답하라. (10점)</h2>
+<p>주어진 자료가 아래와 같다고 하자.</p>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>np.random.seed(<span class="dv">43052</span>)</span>
+<span id="cb13-2"><a href="#cb13-2"></a>x1,y1 <span class="op">=</span>  np.random.multivariate_normal([<span class="op">-</span><span class="dv">2</span>,<span class="op">-</span><span class="dv">2</span>],[[<span class="dv">1</span>,<span class="op">-</span><span class="fl">0.8</span>],[<span class="op">-</span><span class="fl">0.8</span>,<span class="dv">1</span>]],size<span class="op">=</span><span class="dv">500</span>).T</span>
+<span id="cb13-3"><a href="#cb13-3"></a>x2,y2 <span class="op">=</span>  np.random.multivariate_normal([<span class="dv">2</span>,<span class="dv">2</span>],[[<span class="dv">1</span>,<span class="op">-</span><span class="fl">0.7</span>],[<span class="op">-</span><span class="fl">0.7</span>,<span class="dv">1</span>]],size<span class="op">=</span><span class="dv">500</span>).T</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>(1)</code> matplotlib와 seaborn을 이용하여 아래와 같이 시각화 하라.</p>
+<ul>
+<li>alpha=0.1을 사용</li>
+</ul>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>fig,ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].plot(x1,y1,<span class="st">'.'</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].plot(x2,y2,<span class="st">'.'</span>,alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">"(a) matplotlib - highlight (x1,y1)"</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a>sns.scatterplot(x<span class="op">=</span>x1,y<span class="op">=</span>y1,ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">1</span>])</span>
+<span id="cb14-6"><a href="#cb14-6"></a>sns.scatterplot(x<span class="op">=</span>x2,y<span class="op">=</span>y2,ax<span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">1</span>],alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb14-7"><a href="#cb14-7"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="st">"(b) seaborn - highlight (x1,y1)"</span>)</span>
+<span id="cb14-8"><a href="#cb14-8"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].plot(x1,y1,<span class="st">'.'</span>,alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb14-9"><a href="#cb14-9"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].plot(x2,y2,<span class="st">'.'</span>)</span>
+<span id="cb14-10"><a href="#cb14-10"></a>sns.scatterplot(x<span class="op">=</span>x1,y<span class="op">=</span>y1,ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>],alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb14-11"><a href="#cb14-11"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_title(<span class="st">"(c) matplotlib - highlight (x2,y2)"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12"></a>sns.scatterplot(x<span class="op">=</span>x2,y<span class="op">=</span>y2,ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb14-13"><a href="#cb14-13"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].set_title(<span class="st">"(d) seaborn - highlight (x2,y2)"</span>)</span>
+<span id="cb14-14"><a href="#cb14-14"></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<ul>
+<li>채점기준: (b)와 (d)의 그림을 seaborn으로 생성하지 않을 경우 정답으로 인정안함</li>
+</ul>
+<p><code>(2)</code> plotnine을 이용하여 아래와 같이 시각화하라. - alpha=0.1을 사용</p>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>x<span class="op">=</span>np.concatenate([x1,x2])</span>
+<span id="cb15-2"><a href="#cb15-2"></a>y<span class="op">=</span>np.concatenate([y1,y2])</span>
+<span id="cb15-3"><a href="#cb15-3"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'x'</span>:x,<span class="st">'y'</span>:y,<span class="st">'cat'</span>:[<span class="st">'A'</span>]<span class="op">*</span><span class="bu">len</span>(x1)<span class="op">+</span>[<span class="st">'B'</span>]<span class="op">*</span><span class="bu">len</span>(x2)})</span>
+<span id="cb15-4"><a href="#cb15-4"></a>ggplot(df)<span class="op">+</span>geom_point(aes(x<span class="op">=</span><span class="st">'x'</span>,y<span class="op">=</span><span class="st">'y'</span>,color<span class="op">=</span><span class="st">'cat'</span>),alpha<span class="op">=</span><span class="fl">0.1</span>)<span class="op">\</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="op">+</span>geom_smooth(aes(x<span class="op">=</span><span class="st">'x'</span>,y<span class="op">=</span><span class="st">'y'</span>,color<span class="op">=</span><span class="st">'cat'</span>))<span class="op">\</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="op">+</span>geom_smooth(aes(x<span class="op">=</span><span class="st">'x'</span>,y<span class="op">=</span><span class="st">'y'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/home/cgb4/anaconda3/envs/py37/lib/python3.7/site-packages/plotnine/stats/smoothers.py:311: PlotnineWarning: Confidence intervals are not yet implementedfor lowess smoothings.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-14-output-2.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<pre><code>&lt;ggplot: (8776325576381)&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li>채점기준: 산점도, 그룹별추세선, 전체추세선이 모두 있을 경우만 정답으로 인정</li>
+</ul>
+</section>
+<section id="자료분석-및-시각화-i-40점-fifa22자료" class="level2">
+<h2 class="anchored" data-anchor-id="자료분석-및-시각화-i-40점-fifa22자료"><code>4</code>. 자료분석 및 시각화 I (40점) – FIFA22자료</h2>
+<p>아래의 코드를 활용하여 FIFA22의 자료를 불러온뒤 물음에 답하라.</p>
+<div class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2021/master/_notebooks/2021-10-25-FIFA22_official_data.csv'</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="89">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Photo</th>
+      <th>Nationality</th>
+      <th>Flag</th>
+      <th>Overall</th>
+      <th>Potential</th>
+      <th>Club</th>
+      <th>Club Logo</th>
+      <th>...</th>
+      <th>SlidingTackle</th>
+      <th>GKDiving</th>
+      <th>GKHandling</th>
+      <th>GKKicking</th>
+      <th>GKPositioning</th>
+      <th>GKReflexes</th>
+      <th>Best Position</th>
+      <th>Best Overall Rating</th>
+      <th>Release Clause</th>
+      <th>DefensiveAwareness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>212198</td>
+      <td>Bruno Fernandes</td>
+      <td>26</td>
+      <td>https://cdn.sofifa.com/players/212/198/22_60.png</td>
+      <td>Portugal</td>
+      <td>https://cdn.sofifa.com/flags/pt.png</td>
+      <td>88</td>
+      <td>89</td>
+      <td>Manchester United</td>
+      <td>https://cdn.sofifa.com/teams/11/30.png</td>
+      <td>...</td>
+      <td>65.0</td>
+      <td>12.0</td>
+      <td>14.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>CAM</td>
+      <td>88.0</td>
+      <td>€206.9M</td>
+      <td>72.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>209658</td>
+      <td>L. Goretzka</td>
+      <td>26</td>
+      <td>https://cdn.sofifa.com/players/209/658/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>87</td>
+      <td>88</td>
+      <td>FC Bayern München</td>
+      <td>https://cdn.sofifa.com/teams/21/30.png</td>
+      <td>...</td>
+      <td>77.0</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>15.0</td>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>CM</td>
+      <td>87.0</td>
+      <td>€160.4M</td>
+      <td>74.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176580</td>
+      <td>L. Suárez</td>
+      <td>34</td>
+      <td>https://cdn.sofifa.com/players/176/580/22_60.png</td>
+      <td>Uruguay</td>
+      <td>https://cdn.sofifa.com/flags/uy.png</td>
+      <td>88</td>
+      <td>88</td>
+      <td>Atlético de Madrid</td>
+      <td>https://cdn.sofifa.com/teams/240/30.png</td>
+      <td>...</td>
+      <td>38.0</td>
+      <td>27.0</td>
+      <td>25.0</td>
+      <td>31.0</td>
+      <td>33.0</td>
+      <td>37.0</td>
+      <td>ST</td>
+      <td>88.0</td>
+      <td>€91.2M</td>
+      <td>42.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>192985</td>
+      <td>K. De Bruyne</td>
+      <td>30</td>
+      <td>https://cdn.sofifa.com/players/192/985/22_60.png</td>
+      <td>Belgium</td>
+      <td>https://cdn.sofifa.com/flags/be.png</td>
+      <td>91</td>
+      <td>91</td>
+      <td>Manchester City</td>
+      <td>https://cdn.sofifa.com/teams/10/30.png</td>
+      <td>...</td>
+      <td>53.0</td>
+      <td>15.0</td>
+      <td>13.0</td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>CM</td>
+      <td>91.0</td>
+      <td>€232.2M</td>
+      <td>68.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>224334</td>
+      <td>M. Acuña</td>
+      <td>29</td>
+      <td>https://cdn.sofifa.com/players/224/334/22_60.png</td>
+      <td>Argentina</td>
+      <td>https://cdn.sofifa.com/flags/ar.png</td>
+      <td>84</td>
+      <td>84</td>
+      <td>Sevilla FC</td>
+      <td>https://cdn.sofifa.com/teams/481/30.png</td>
+      <td>...</td>
+      <td>82.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>LB</td>
+      <td>84.0</td>
+      <td>€77.7M</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16705</th>
+      <td>240558</td>
+      <td>18&nbsp;L. Clayton</td>
+      <td>17</td>
+      <td>https://cdn.sofifa.com/players/240/558/18_60.png</td>
+      <td>England</td>
+      <td>https://cdn.sofifa.com/flags/gb-eng.png</td>
+      <td>53</td>
+      <td>70</td>
+      <td>Cheltenham Town</td>
+      <td>https://cdn.sofifa.com/teams/1936/30.png</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>55.0</td>
+      <td>54.0</td>
+      <td>52.0</td>
+      <td>50.0</td>
+      <td>59.0</td>
+      <td>GK</td>
+      <td>52.0</td>
+      <td>€238K</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16706</th>
+      <td>262846</td>
+      <td>�. Dobre</td>
+      <td>20</td>
+      <td>https://cdn.sofifa.com/players/262/846/22_60.png</td>
+      <td>Romania</td>
+      <td>https://cdn.sofifa.com/flags/ro.png</td>
+      <td>53</td>
+      <td>63</td>
+      <td>FC Academica Clinceni</td>
+      <td>https://cdn.sofifa.com/teams/113391/30.png</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>57.0</td>
+      <td>52.0</td>
+      <td>53.0</td>
+      <td>48.0</td>
+      <td>58.0</td>
+      <td>GK</td>
+      <td>53.0</td>
+      <td>€279K</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>16707</th>
+      <td>241317</td>
+      <td>21&nbsp;Xue Qinghao</td>
+      <td>19</td>
+      <td>https://cdn.sofifa.com/players/241/317/21_60.png</td>
+      <td>China PR</td>
+      <td>https://cdn.sofifa.com/flags/cn.png</td>
+      <td>47</td>
+      <td>60</td>
+      <td>Shanghai Shenhua FC</td>
+      <td>https://cdn.sofifa.com/teams/110955/30.png</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>49.0</td>
+      <td>48.0</td>
+      <td>45.0</td>
+      <td>38.0</td>
+      <td>52.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€223K</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>16708</th>
+      <td>259646</td>
+      <td>A. Shaikh</td>
+      <td>18</td>
+      <td>https://cdn.sofifa.com/players/259/646/22_60.png</td>
+      <td>India</td>
+      <td>https://cdn.sofifa.com/flags/in.png</td>
+      <td>47</td>
+      <td>67</td>
+      <td>ATK Mohun Bagan FC</td>
+      <td>https://cdn.sofifa.com/teams/113146/30.png</td>
+      <td>...</td>
+      <td>13.0</td>
+      <td>49.0</td>
+      <td>41.0</td>
+      <td>39.0</td>
+      <td>45.0</td>
+      <td>49.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€259K</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>16709</th>
+      <td>178453</td>
+      <td>07&nbsp;A. Censori</td>
+      <td>17</td>
+      <td>https://cdn.sofifa.com/players/178/453/07_60.png</td>
+      <td>Italy</td>
+      <td>https://cdn.sofifa.com/flags/it.png</td>
+      <td>28</td>
+      <td>38</td>
+      <td>Arezzo</td>
+      <td>https://cdn.sofifa.com/teams/110907/30.png</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>36.0</td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>ST</td>
+      <td>36.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>16710 rows × 65 columns</p>
+</div>
+</div>
+</div>
+<p><code>(1)</code> 연령별로 선수들의 잠재력을 시각화하고 싶다. 여기에서 잠재력은 아래의 수식의 Potential2를 의미한다.</p>
+<pre><code>Potential2 = Potential - Overall</code></pre>
+<p>아래의 세부지침에 맞추어 연령별 Potential2의 산점도와 boxplot을 그려라. – (10점)</p>
+<p><strong>(세부지침)</strong></p>
+<p><strong>step1</strong>: 결측치가 가장 많은 2개의 컬럼을 찾고 이를 제거하라.</p>
+<p><strong>step2</strong>: dropna()를 이용하여 결측치를 제거하라.</p>
+<p><strong>step3</strong>: Potential2 = Potential - Overall 를 이용하여 Potential2를 구하라.</p>
+<p><strong>step4</strong>: 구간 [0,20,22,26,100]를 설정하고 이를 기준으로 Age를 그룹화하라. (총 4개의 그룹으로 나누어져야 한다)</p>
+<p><strong>step5</strong>: 그룹화된 Age를 x축으로, Potential2를 y축으로, 색깔을 그룹화된 Age로 설정한 뒤 산점도와 박스플랏을 겹쳐그려라. - 산점도의 파라메터: alpha=0.5,size=0.1,position=‘jitter’ - 박스플랏의 파라메터: alpha=0.8</p>
+<p>(풀이)</p>
+<div class="cell" data-execution_count="90">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 16710 entries, 0 to 16709
+Data columns (total 65 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   ID                        16710 non-null  int64  
+ 1   Name                      16710 non-null  object 
+ 2   Age                       16710 non-null  int64  
+ 3   Photo                     16710 non-null  object 
+ 4   Nationality               16710 non-null  object 
+ 5   Flag                      16710 non-null  object 
+ 6   Overall                   16710 non-null  int64  
+ 7   Potential                 16710 non-null  int64  
+ 8   Club                      16446 non-null  object 
+ 9   Club Logo                 16710 non-null  object 
+ 10  Value                     16710 non-null  object 
+ 11  Wage                      16710 non-null  object 
+ 12  Special                   16710 non-null  int64  
+ 13  Preferred Foot            16710 non-null  object 
+ 14  International Reputation  16710 non-null  float64
+ 15  Weak Foot                 16710 non-null  float64
+ 16  Skill Moves               16710 non-null  float64
+ 17  Work Rate                 16710 non-null  object 
+ 18  Body Type                 16681 non-null  object 
+ 19  Real Face                 16681 non-null  object 
+ 20  Position                  16684 non-null  object 
+ 21  Jersey Number             16684 non-null  float64
+ 22  Joined                    15198 non-null  object 
+ 23  Loaned From               1132 non-null   object 
+ 24  Contract Valid Until      16359 non-null  object 
+ 25  Height                    16710 non-null  object 
+ 26  Weight                    16710 non-null  object 
+ 27  Crossing                  16710 non-null  float64
+ 28  Finishing                 16710 non-null  float64
+ 29  HeadingAccuracy           16710 non-null  float64
+ 30  ShortPassing              16710 non-null  float64
+ 31  Volleys                   16673 non-null  float64
+ 32  Dribbling                 16710 non-null  float64
+ 33  Curve                     16673 non-null  float64
+ 34  FKAccuracy                16710 non-null  float64
+ 35  LongPassing               16710 non-null  float64
+ 36  BallControl               16710 non-null  float64
+ 37  Acceleration              16710 non-null  float64
+ 38  SprintSpeed               16710 non-null  float64
+ 39  Agility                   16673 non-null  float64
+ 40  Reactions                 16710 non-null  float64
+ 41  Balance                   16673 non-null  float64
+ 42  ShotPower                 16710 non-null  float64
+ 43  Jumping                   16673 non-null  float64
+ 44  Stamina                   16710 non-null  float64
+ 45  Strength                  16710 non-null  float64
+ 46  LongShots                 16710 non-null  float64
+ 47  Aggression                16710 non-null  float64
+ 48  Interceptions             16702 non-null  float64
+ 49  Positioning               16702 non-null  float64
+ 50  Vision                    16673 non-null  float64
+ 51  Penalties                 16710 non-null  float64
+ 52  Composure                 16459 non-null  float64
+ 53  Marking                   892 non-null    float64
+ 54  StandingTackle            16710 non-null  float64
+ 55  SlidingTackle             16673 non-null  float64
+ 56  GKDiving                  16710 non-null  float64
+ 57  GKHandling                16710 non-null  float64
+ 58  GKKicking                 16710 non-null  float64
+ 59  GKPositioning             16710 non-null  float64
+ 60  GKReflexes                16710 non-null  float64
+ 61  Best Position             16710 non-null  object 
+ 62  Best Overall Rating       16710 non-null  float64
+ 63  Release Clause            14961 non-null  object 
+ 64  DefensiveAwareness        15818 non-null  float64
+dtypes: float64(40), int64(5), object(20)
+memory usage: 8.3+ MB</code></pre>
+</div>
+</div>
+<ul>
+<li>’Loaned From’와 ’Marking’이 가장 결측치가 많이 포함되어있음</li>
+</ul>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a>data1<span class="op">=</span> df.drop(columns<span class="op">=</span>[<span class="st">'Loaned From'</span>, <span class="st">'Marking'</span>]).dropna()<span class="op">\</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>.<span class="bu">eval</span>(<span class="st">'Potential2 = Potential- Overall'</span>)<span class="op">\</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>.assign(Age <span class="op">=</span> <span class="kw">lambda</span> df: pd.cut(df[<span class="st">'Age'</span>],[<span class="dv">0</span>,<span class="dv">20</span>,<span class="dv">22</span>,<span class="dv">26</span>,<span class="dv">100</span>]))</span>
+<span id="cb22-4"><a href="#cb22-4"></a>data1 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Photo</th>
+      <th>Nationality</th>
+      <th>Flag</th>
+      <th>Overall</th>
+      <th>Potential</th>
+      <th>Club</th>
+      <th>Club Logo</th>
+      <th>...</th>
+      <th>GKDiving</th>
+      <th>GKHandling</th>
+      <th>GKKicking</th>
+      <th>GKPositioning</th>
+      <th>GKReflexes</th>
+      <th>Best Position</th>
+      <th>Best Overall Rating</th>
+      <th>Release Clause</th>
+      <th>DefensiveAwareness</th>
+      <th>Potential2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>212198</td>
+      <td>Bruno Fernandes</td>
+      <td>(22, 26]</td>
+      <td>https://cdn.sofifa.com/players/212/198/22_60.png</td>
+      <td>Portugal</td>
+      <td>https://cdn.sofifa.com/flags/pt.png</td>
+      <td>88</td>
+      <td>89</td>
+      <td>Manchester United</td>
+      <td>https://cdn.sofifa.com/teams/11/30.png</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>14.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>CAM</td>
+      <td>88.0</td>
+      <td>€206.9M</td>
+      <td>72.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>209658</td>
+      <td>L. Goretzka</td>
+      <td>(22, 26]</td>
+      <td>https://cdn.sofifa.com/players/209/658/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>87</td>
+      <td>88</td>
+      <td>FC Bayern München</td>
+      <td>https://cdn.sofifa.com/teams/21/30.png</td>
+      <td>...</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>15.0</td>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>CM</td>
+      <td>87.0</td>
+      <td>€160.4M</td>
+      <td>74.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176580</td>
+      <td>L. Suárez</td>
+      <td>(26, 100]</td>
+      <td>https://cdn.sofifa.com/players/176/580/22_60.png</td>
+      <td>Uruguay</td>
+      <td>https://cdn.sofifa.com/flags/uy.png</td>
+      <td>88</td>
+      <td>88</td>
+      <td>Atlético de Madrid</td>
+      <td>https://cdn.sofifa.com/teams/240/30.png</td>
+      <td>...</td>
+      <td>27.0</td>
+      <td>25.0</td>
+      <td>31.0</td>
+      <td>33.0</td>
+      <td>37.0</td>
+      <td>ST</td>
+      <td>88.0</td>
+      <td>€91.2M</td>
+      <td>42.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>192985</td>
+      <td>K. De Bruyne</td>
+      <td>(26, 100]</td>
+      <td>https://cdn.sofifa.com/players/192/985/22_60.png</td>
+      <td>Belgium</td>
+      <td>https://cdn.sofifa.com/flags/be.png</td>
+      <td>91</td>
+      <td>91</td>
+      <td>Manchester City</td>
+      <td>https://cdn.sofifa.com/teams/10/30.png</td>
+      <td>...</td>
+      <td>15.0</td>
+      <td>13.0</td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>CM</td>
+      <td>91.0</td>
+      <td>€232.2M</td>
+      <td>68.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>224334</td>
+      <td>M. Acuña</td>
+      <td>(26, 100]</td>
+      <td>https://cdn.sofifa.com/players/224/334/22_60.png</td>
+      <td>Argentina</td>
+      <td>https://cdn.sofifa.com/flags/ar.png</td>
+      <td>84</td>
+      <td>84</td>
+      <td>Sevilla FC</td>
+      <td>https://cdn.sofifa.com/teams/481/30.png</td>
+      <td>...</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>LB</td>
+      <td>84.0</td>
+      <td>€77.7M</td>
+      <td>80.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16703</th>
+      <td>259718</td>
+      <td>F. Gebhardt</td>
+      <td>(0, 20]</td>
+      <td>https://cdn.sofifa.com/players/259/718/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>52</td>
+      <td>66</td>
+      <td>FC Basel 1893</td>
+      <td>https://cdn.sofifa.com/teams/896/30.png</td>
+      <td>...</td>
+      <td>53.0</td>
+      <td>45.0</td>
+      <td>47.0</td>
+      <td>52.0</td>
+      <td>57.0</td>
+      <td>GK</td>
+      <td>52.0</td>
+      <td>€361K</td>
+      <td>6.0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>16704</th>
+      <td>251433</td>
+      <td>B. Voll</td>
+      <td>(0, 20]</td>
+      <td>https://cdn.sofifa.com/players/251/433/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>58</td>
+      <td>69</td>
+      <td>F.C. Hansa Rostock</td>
+      <td>https://cdn.sofifa.com/teams/27/30.png</td>
+      <td>...</td>
+      <td>59.0</td>
+      <td>60.0</td>
+      <td>56.0</td>
+      <td>55.0</td>
+      <td>61.0</td>
+      <td>GK</td>
+      <td>58.0</td>
+      <td>€656K</td>
+      <td>5.0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>16706</th>
+      <td>262846</td>
+      <td>�. Dobre</td>
+      <td>(0, 20]</td>
+      <td>https://cdn.sofifa.com/players/262/846/22_60.png</td>
+      <td>Romania</td>
+      <td>https://cdn.sofifa.com/flags/ro.png</td>
+      <td>53</td>
+      <td>63</td>
+      <td>FC Academica Clinceni</td>
+      <td>https://cdn.sofifa.com/teams/113391/30.png</td>
+      <td>...</td>
+      <td>57.0</td>
+      <td>52.0</td>
+      <td>53.0</td>
+      <td>48.0</td>
+      <td>58.0</td>
+      <td>GK</td>
+      <td>53.0</td>
+      <td>€279K</td>
+      <td>5.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>16707</th>
+      <td>241317</td>
+      <td>21&nbsp;Xue Qinghao</td>
+      <td>(0, 20]</td>
+      <td>https://cdn.sofifa.com/players/241/317/21_60.png</td>
+      <td>China PR</td>
+      <td>https://cdn.sofifa.com/flags/cn.png</td>
+      <td>47</td>
+      <td>60</td>
+      <td>Shanghai Shenhua FC</td>
+      <td>https://cdn.sofifa.com/teams/110955/30.png</td>
+      <td>...</td>
+      <td>49.0</td>
+      <td>48.0</td>
+      <td>45.0</td>
+      <td>38.0</td>
+      <td>52.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€223K</td>
+      <td>21.0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>16708</th>
+      <td>259646</td>
+      <td>A. Shaikh</td>
+      <td>(0, 20]</td>
+      <td>https://cdn.sofifa.com/players/259/646/22_60.png</td>
+      <td>India</td>
+      <td>https://cdn.sofifa.com/flags/in.png</td>
+      <td>47</td>
+      <td>67</td>
+      <td>ATK Mohun Bagan FC</td>
+      <td>https://cdn.sofifa.com/teams/113146/30.png</td>
+      <td>...</td>
+      <td>49.0</td>
+      <td>41.0</td>
+      <td>39.0</td>
+      <td>45.0</td>
+      <td>49.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€259K</td>
+      <td>7.0</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+<p>14398 rows × 64 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>fig <span class="op">=</span> ggplot(data<span class="op">=</span>data1)</span>
+<span id="cb23-2"><a href="#cb23-2"></a>scatter <span class="op">=</span> geom_point(aes(x<span class="op">=</span><span class="st">'Age'</span>,y<span class="op">=</span><span class="st">'Potential2'</span>,colour<span class="op">=</span><span class="st">'Age'</span>),alpha<span class="op">=</span><span class="fl">0.5</span>,size<span class="op">=</span><span class="fl">0.1</span>,position<span class="op">=</span><span class="st">'jitter'</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>boxplot <span class="op">=</span> geom_boxplot(aes(x<span class="op">=</span><span class="st">'Age'</span>,y<span class="op">=</span><span class="st">'Potential2'</span>,colour<span class="op">=</span><span class="st">'Age'</span>),alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb23-4"><a href="#cb23-4"></a>fig<span class="op">+</span>scatter<span class="op">+</span>boxplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="73">
+<pre><code>&lt;ggplot: (8776319269061)&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li>채점기준: Age의 Label을 사용하지 않아도 만점으로 인정함.</li>
+</ul>
+<p><code>(2)</code> 포지션별로 선수들의 능력치와 Wage를 시각화하고 싶다. 아래의 dictionary를 이용하여 Position을 재정의하라.</p>
+<div class="cell" data-execution_count="45">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>position_dict <span class="op">=</span> {</span>
+<span id="cb25-2"><a href="#cb25-2"></a>    <span class="st">'GOALKEEPER'</span>:{<span class="st">'GK'</span>},</span>
+<span id="cb25-3"><a href="#cb25-3"></a>    <span class="st">'DEFENDER'</span>:{<span class="st">'CB'</span>,<span class="st">'RCB'</span>,<span class="st">'LCB'</span>,<span class="st">'RB'</span>,<span class="st">'LB'</span>,<span class="st">'RWB'</span>,<span class="st">'LWB'</span>},</span>
+<span id="cb25-4"><a href="#cb25-4"></a>    <span class="st">'MIDFIELDER'</span>:{<span class="st">'CM'</span>,<span class="st">'RCM'</span>,<span class="st">'LCM'</span>,<span class="st">'CDM'</span>,<span class="st">'RDM'</span>,<span class="st">'LDM'</span>,<span class="st">'CAM'</span>,<span class="st">'RAM'</span>,<span class="st">'LAM'</span>,<span class="st">'RM'</span>,<span class="st">'LM'</span>},</span>
+<span id="cb25-5"><a href="#cb25-5"></a>    <span class="st">'FORWARD'</span>:{<span class="st">'ST'</span>,<span class="st">'CF'</span>,<span class="st">'RF'</span>,<span class="st">'LF'</span>,<span class="st">'RW'</span>,<span class="st">'LW'</span>,<span class="st">'RS'</span>,<span class="st">'LS'</span>},</span>
+<span id="cb25-6"><a href="#cb25-6"></a>    <span class="st">'SUB'</span>:{<span class="st">'SUB'</span>},</span>
+<span id="cb25-7"><a href="#cb25-7"></a>    <span class="st">'RES'</span>:{<span class="st">'RES'</span>}</span>
+<span id="cb25-8"><a href="#cb25-8"></a>}</span>
+<span id="cb25-9"><a href="#cb25-9"></a>position_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
+<pre><code>{'GOALKEEPER': {'GK'},
+ 'DEFENDER': {'CB', 'LB', 'LCB', 'LWB', 'RB', 'RCB', 'RWB'},
+ 'MIDFIELDER': {'CAM',
+  'CDM',
+  'CM',
+  'LAM',
+  'LCM',
+  'LDM',
+  'LM',
+  'RAM',
+  'RCM',
+  'RDM',
+  'RM'},
+ 'FORWARD': {'CF', 'LF', 'LS', 'LW', 'RF', 'RS', 'RW', 'ST'},
+ 'SUB': {'SUB'},
+ 'RES': {'RES'}}</code></pre>
+</div>
+</div>
+<p>아래의 세부지침에 맞추어 포지션별 ShotPower와 SlidingTackle의 산점도를 그려라. – (30점)</p>
+<p><strong>세부지침</strong></p>
+<p><strong>step1</strong>: 결측치가 가장 많은 2개의 컬럼을 찾고 이를 제거하라.</p>
+<p><strong>step2</strong>: dropna()를 이용하여 결측치를 제거하라.</p>
+<p><strong>step3</strong>: hint1과 position_dict을 참고하여 Position을 적절하게 변환하라. (변환된 값을 Position으로 저장할 것)</p>
+<p><strong>step4</strong>: hint2를 참고하여 Wage를 적절하게 변환하라. (변환된 값을 Wage에 저장할 것)</p>
+<p><strong>step5</strong>: Position==“DEFENDER” or Position==“FORWARD”에 해당하는 관측치를 고른 뒤 x축에 ShotPower, y축에 SlidingTackle 을 시각화하라. Position은 color로 구분하고 Wage는 size와 alpha로 구분하라.</p>
+<p><strong>hint1</strong>: Position column의 변환을 위한 코드</p>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">'&lt;span class="pos pos18"&gt;CAM'</span>.split(<span class="st">'&gt;'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<pre><code>['&lt;span class="pos pos18"', 'CAM']</code></pre>
+</div>
+</div>
+<p><strong>hint2</strong>: Wage column의 변환을 위한 함수</p>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb29-2"><a href="#cb29-2"></a>    <span class="cf">if</span> x[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> <span class="st">'K'</span> :</span>
+<span id="cb29-3"><a href="#cb29-3"></a>        y<span class="op">=</span> <span class="bu">float</span>(x[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>])<span class="op">*</span><span class="dv">1000</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>    <span class="cf">elif</span> x[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> <span class="st">'M'</span> : </span>
+<span id="cb29-5"><a href="#cb29-5"></a>        y<span class="op">=</span> <span class="bu">float</span>(x[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>])<span class="op">*</span><span class="dv">1000000</span></span>
+<span id="cb29-6"><a href="#cb29-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb29-7"><a href="#cb29-7"></a>        y<span class="op">=</span> <span class="dv">0</span> </span>
+<span id="cb29-8"><a href="#cb29-8"></a>    <span class="cf">return</span> y </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>(풀이)</p>
+<div class="cell" data-execution_count="92">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>data2<span class="op">=</span>df.drop(columns<span class="op">=</span>[<span class="st">'Loaned From'</span>, <span class="st">'Marking'</span>]).dropna()<span class="op">\</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>.assign(Wage <span class="op">=</span> <span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(f,df[<span class="st">'Wage'</span>])))<span class="op">\</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>.assign(Position <span class="op">=</span> <span class="kw">lambda</span> df: <span class="bu">list</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x.split(<span class="st">'&gt;'</span>)[<span class="op">-</span><span class="dv">1</span>], df.Position)))<span class="op">\</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>.assign(Position <span class="op">=</span> <span class="kw">lambda</span> df: </span>
+<span id="cb30-5"><a href="#cb30-5"></a>        [key <span class="cf">for</span> x <span class="kw">in</span> df.Position <span class="cf">for</span> key <span class="kw">in</span> position_dict <span class="cf">if</span> x <span class="kw">in</span> position_dict[key]]</span>
+<span id="cb30-6"><a href="#cb30-6"></a>       )</span>
+<span id="cb30-7"><a href="#cb30-7"></a>data2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="92">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Photo</th>
+      <th>Nationality</th>
+      <th>Flag</th>
+      <th>Overall</th>
+      <th>Potential</th>
+      <th>Club</th>
+      <th>Club Logo</th>
+      <th>...</th>
+      <th>SlidingTackle</th>
+      <th>GKDiving</th>
+      <th>GKHandling</th>
+      <th>GKKicking</th>
+      <th>GKPositioning</th>
+      <th>GKReflexes</th>
+      <th>Best Position</th>
+      <th>Best Overall Rating</th>
+      <th>Release Clause</th>
+      <th>DefensiveAwareness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>212198</td>
+      <td>Bruno Fernandes</td>
+      <td>26</td>
+      <td>https://cdn.sofifa.com/players/212/198/22_60.png</td>
+      <td>Portugal</td>
+      <td>https://cdn.sofifa.com/flags/pt.png</td>
+      <td>88</td>
+      <td>89</td>
+      <td>Manchester United</td>
+      <td>https://cdn.sofifa.com/teams/11/30.png</td>
+      <td>...</td>
+      <td>65.0</td>
+      <td>12.0</td>
+      <td>14.0</td>
+      <td>15.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>CAM</td>
+      <td>88.0</td>
+      <td>€206.9M</td>
+      <td>72.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>209658</td>
+      <td>L. Goretzka</td>
+      <td>26</td>
+      <td>https://cdn.sofifa.com/players/209/658/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>87</td>
+      <td>88</td>
+      <td>FC Bayern München</td>
+      <td>https://cdn.sofifa.com/teams/21/30.png</td>
+      <td>...</td>
+      <td>77.0</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>15.0</td>
+      <td>11.0</td>
+      <td>9.0</td>
+      <td>CM</td>
+      <td>87.0</td>
+      <td>€160.4M</td>
+      <td>74.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176580</td>
+      <td>L. Suárez</td>
+      <td>34</td>
+      <td>https://cdn.sofifa.com/players/176/580/22_60.png</td>
+      <td>Uruguay</td>
+      <td>https://cdn.sofifa.com/flags/uy.png</td>
+      <td>88</td>
+      <td>88</td>
+      <td>Atlético de Madrid</td>
+      <td>https://cdn.sofifa.com/teams/240/30.png</td>
+      <td>...</td>
+      <td>38.0</td>
+      <td>27.0</td>
+      <td>25.0</td>
+      <td>31.0</td>
+      <td>33.0</td>
+      <td>37.0</td>
+      <td>ST</td>
+      <td>88.0</td>
+      <td>€91.2M</td>
+      <td>42.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>192985</td>
+      <td>K. De Bruyne</td>
+      <td>30</td>
+      <td>https://cdn.sofifa.com/players/192/985/22_60.png</td>
+      <td>Belgium</td>
+      <td>https://cdn.sofifa.com/flags/be.png</td>
+      <td>91</td>
+      <td>91</td>
+      <td>Manchester City</td>
+      <td>https://cdn.sofifa.com/teams/10/30.png</td>
+      <td>...</td>
+      <td>53.0</td>
+      <td>15.0</td>
+      <td>13.0</td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>CM</td>
+      <td>91.0</td>
+      <td>€232.2M</td>
+      <td>68.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>224334</td>
+      <td>M. Acuña</td>
+      <td>29</td>
+      <td>https://cdn.sofifa.com/players/224/334/22_60.png</td>
+      <td>Argentina</td>
+      <td>https://cdn.sofifa.com/flags/ar.png</td>
+      <td>84</td>
+      <td>84</td>
+      <td>Sevilla FC</td>
+      <td>https://cdn.sofifa.com/teams/481/30.png</td>
+      <td>...</td>
+      <td>82.0</td>
+      <td>8.0</td>
+      <td>14.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>LB</td>
+      <td>84.0</td>
+      <td>€77.7M</td>
+      <td>80.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16703</th>
+      <td>259718</td>
+      <td>F. Gebhardt</td>
+      <td>19</td>
+      <td>https://cdn.sofifa.com/players/259/718/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>52</td>
+      <td>66</td>
+      <td>FC Basel 1893</td>
+      <td>https://cdn.sofifa.com/teams/896/30.png</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>53.0</td>
+      <td>45.0</td>
+      <td>47.0</td>
+      <td>52.0</td>
+      <td>57.0</td>
+      <td>GK</td>
+      <td>52.0</td>
+      <td>€361K</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>16704</th>
+      <td>251433</td>
+      <td>B. Voll</td>
+      <td>20</td>
+      <td>https://cdn.sofifa.com/players/251/433/22_60.png</td>
+      <td>Germany</td>
+      <td>https://cdn.sofifa.com/flags/de.png</td>
+      <td>58</td>
+      <td>69</td>
+      <td>F.C. Hansa Rostock</td>
+      <td>https://cdn.sofifa.com/teams/27/30.png</td>
+      <td>...</td>
+      <td>10.0</td>
+      <td>59.0</td>
+      <td>60.0</td>
+      <td>56.0</td>
+      <td>55.0</td>
+      <td>61.0</td>
+      <td>GK</td>
+      <td>58.0</td>
+      <td>€656K</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>16706</th>
+      <td>262846</td>
+      <td>�. Dobre</td>
+      <td>20</td>
+      <td>https://cdn.sofifa.com/players/262/846/22_60.png</td>
+      <td>Romania</td>
+      <td>https://cdn.sofifa.com/flags/ro.png</td>
+      <td>53</td>
+      <td>63</td>
+      <td>FC Academica Clinceni</td>
+      <td>https://cdn.sofifa.com/teams/113391/30.png</td>
+      <td>...</td>
+      <td>12.0</td>
+      <td>57.0</td>
+      <td>52.0</td>
+      <td>53.0</td>
+      <td>48.0</td>
+      <td>58.0</td>
+      <td>GK</td>
+      <td>53.0</td>
+      <td>€279K</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>16707</th>
+      <td>241317</td>
+      <td>21&nbsp;Xue Qinghao</td>
+      <td>19</td>
+      <td>https://cdn.sofifa.com/players/241/317/21_60.png</td>
+      <td>China PR</td>
+      <td>https://cdn.sofifa.com/flags/cn.png</td>
+      <td>47</td>
+      <td>60</td>
+      <td>Shanghai Shenhua FC</td>
+      <td>https://cdn.sofifa.com/teams/110955/30.png</td>
+      <td>...</td>
+      <td>9.0</td>
+      <td>49.0</td>
+      <td>48.0</td>
+      <td>45.0</td>
+      <td>38.0</td>
+      <td>52.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€223K</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>16708</th>
+      <td>259646</td>
+      <td>A. Shaikh</td>
+      <td>18</td>
+      <td>https://cdn.sofifa.com/players/259/646/22_60.png</td>
+      <td>India</td>
+      <td>https://cdn.sofifa.com/flags/in.png</td>
+      <td>47</td>
+      <td>67</td>
+      <td>ATK Mohun Bagan FC</td>
+      <td>https://cdn.sofifa.com/teams/113146/30.png</td>
+      <td>...</td>
+      <td>13.0</td>
+      <td>49.0</td>
+      <td>41.0</td>
+      <td>39.0</td>
+      <td>45.0</td>
+      <td>49.0</td>
+      <td>GK</td>
+      <td>47.0</td>
+      <td>€259K</td>
+      <td>7.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>14398 rows × 63 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>fig <span class="op">=</span> ggplot(data<span class="op">=</span>data2.query(<span class="st">'Position=="DEFENDER" or Position=="FORWARD"'</span>))</span>
+<span id="cb31-2"><a href="#cb31-2"></a>scatter <span class="op">=</span> geom_point(aes(x<span class="op">=</span><span class="st">'ShotPower'</span>,y<span class="op">=</span><span class="st">'SlidingTackle'</span>,color<span class="op">=</span><span class="st">'Position'</span>,size<span class="op">=</span><span class="st">'Wage'</span>,alpha<span class="op">=</span><span class="st">'Wage'</span>))</span>
+<span id="cb31-3"><a href="#cb31-3"></a>fig<span class="op">+</span>scatter</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-23-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="50">
+<pre><code>&lt;ggplot: (8776325574701)&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li>채점기준: df[‘Position’]이 아니라 df[‘Best Position’]을 이용하여 자료를 변형하고 시각화 하는 경우 부분점수 없이 0점임</li>
+</ul>
+</section>
+<section id="자료분석-및-시각화-ii-20점-hrdataset_v14" class="level2">
+<h2 class="anchored" data-anchor-id="자료분석-및-시각화-ii-20점-hrdataset_v14"><code>5</code>. 자료분석 및 시각화 II (20점) – HRDataset_v14</h2>
+<p>아래의 코드를 활용하여 Kaggle의 <a href="https://www.kaggle.com/datasets/rhuebner/human-resources-data-set">HRdataset</a>을 불러오고 물음에 답하라.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/HRDataset_v14.csv'</span>)</span>
+<span id="cb33-2"><a href="#cb33-2"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Employee_Name</th>
+      <th>EmpID</th>
+      <th>MarriedID</th>
+      <th>MaritalStatusID</th>
+      <th>GenderID</th>
+      <th>EmpStatusID</th>
+      <th>DeptID</th>
+      <th>PerfScoreID</th>
+      <th>FromDiversityJobFairID</th>
+      <th>Salary</th>
+      <th>...</th>
+      <th>ManagerName</th>
+      <th>ManagerID</th>
+      <th>RecruitmentSource</th>
+      <th>PerformanceScore</th>
+      <th>EngagementSurvey</th>
+      <th>EmpSatisfaction</th>
+      <th>SpecialProjectsCount</th>
+      <th>LastPerformanceReview_Date</th>
+      <th>DaysLateLast30</th>
+      <th>Absences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adinolfi, Wilson  K</td>
+      <td>10026</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>4</td>
+      <td>0</td>
+      <td>62506</td>
+      <td>...</td>
+      <td>Michael Albert</td>
+      <td>22.0</td>
+      <td>LinkedIn</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/17/2019</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ait Sidi, Karthikeyan</td>
+      <td>10084</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>104437</td>
+      <td>...</td>
+      <td>Simon Roup</td>
+      <td>4.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>4.96</td>
+      <td>3</td>
+      <td>6</td>
+      <td>2/24/2016</td>
+      <td>0</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Akinkuolie, Sarah</td>
+      <td>10196</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64955</td>
+      <td>...</td>
+      <td>Kissy Sullivan</td>
+      <td>20.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>3.02</td>
+      <td>3</td>
+      <td>0</td>
+      <td>5/15/2012</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Alagbe,Trina</td>
+      <td>10088</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>64991</td>
+      <td>...</td>
+      <td>Elijiah Gray</td>
+      <td>16.0</td>
+      <td>Indeed</td>
+      <td>Fully Meets</td>
+      <td>4.84</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/3/2019</td>
+      <td>0</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Anderson, Carol</td>
+      <td>10069</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>50825</td>
+      <td>...</td>
+      <td>Webster Butler</td>
+      <td>39.0</td>
+      <td>Google Search</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/1/2016</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>Woodson, Jason</td>
+      <td>10135</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>65893</td>
+      <td>...</td>
+      <td>Kissy Sullivan</td>
+      <td>20.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.07</td>
+      <td>4</td>
+      <td>0</td>
+      <td>2/28/2019</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>307</th>
+      <td>Ybarra, Catherine</td>
+      <td>10301</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1</td>
+      <td>0</td>
+      <td>48513</td>
+      <td>...</td>
+      <td>Brannon Miller</td>
+      <td>12.0</td>
+      <td>Google Search</td>
+      <td>PIP</td>
+      <td>3.20</td>
+      <td>2</td>
+      <td>0</td>
+      <td>9/2/2015</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>Zamora, Jennifer</td>
+      <td>10010</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>4</td>
+      <td>0</td>
+      <td>220450</td>
+      <td>...</td>
+      <td>Janet King</td>
+      <td>2.0</td>
+      <td>Employee Referral</td>
+      <td>Exceeds</td>
+      <td>4.60</td>
+      <td>5</td>
+      <td>6</td>
+      <td>2/21/2019</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>Zhou, Julia</td>
+      <td>10043</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>89292</td>
+      <td>...</td>
+      <td>Simon Roup</td>
+      <td>4.0</td>
+      <td>Employee Referral</td>
+      <td>Fully Meets</td>
+      <td>5.00</td>
+      <td>3</td>
+      <td>5</td>
+      <td>2/1/2019</td>
+      <td>0</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>Zima, Colleen</td>
+      <td>10271</td>
+      <td>0</td>
+      <td>4</td>
+      <td>0</td>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>45046</td>
+      <td>...</td>
+      <td>David Stanley</td>
+      <td>14.0</td>
+      <td>LinkedIn</td>
+      <td>Fully Meets</td>
+      <td>4.50</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1/30/2019</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>311 rows × 36 columns</p>
+</div>
+</div>
+</div>
+<p><code>(1)</code> 데이터를 조사하고 올바르게 분석한 사람을 모두 고르라. (모두 맞칠경우만 정답으로 인정)</p>
+<ul>
+<li>소윤: 근무인원수가 가장 많은 인종(RaceDesc)은 ’White’이며 이는 ’Asian’인종과 ’Black or African American’의 합보다 많다.</li>
+<li>다호: ’RaceDesc==White’의 성별(Sex)임금차이는 2000이상이다.</li>
+<li>하니: 퇴직한사람(Termd==1)은 모두 104명이며 백인여성의 퇴직자수가 가장 많다.</li>
+<li>도한: 퇴직한사람중 아시아인의 비율은 10%가 넘지 않는다.</li>
+</ul>
+<p>(풀이)</p>
+<p>모두 참이다.</p>
+<p><strong>데이터조사</strong></p>
+<div class="cell" data-execution_count="78">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 311 entries, 0 to 310
+Data columns (total 36 columns):
+ #   Column                      Non-Null Count  Dtype  
+---  ------                      --------------  -----  
+ 0   Employee_Name               311 non-null    object 
+ 1   EmpID                       311 non-null    int64  
+ 2   MarriedID                   311 non-null    int64  
+ 3   MaritalStatusID             311 non-null    int64  
+ 4   GenderID                    311 non-null    int64  
+ 5   EmpStatusID                 311 non-null    int64  
+ 6   DeptID                      311 non-null    int64  
+ 7   PerfScoreID                 311 non-null    int64  
+ 8   FromDiversityJobFairID      311 non-null    int64  
+ 9   Salary                      311 non-null    int64  
+ 10  Termd                       311 non-null    int64  
+ 11  PositionID                  311 non-null    int64  
+ 12  Position                    311 non-null    object 
+ 13  State                       311 non-null    object 
+ 14  Zip                         311 non-null    int64  
+ 15  DOB                         311 non-null    object 
+ 16  Sex                         311 non-null    object 
+ 17  MaritalDesc                 311 non-null    object 
+ 18  CitizenDesc                 311 non-null    object 
+ 19  HispanicLatino              311 non-null    object 
+ 20  RaceDesc                    311 non-null    object 
+ 21  DateofHire                  311 non-null    object 
+ 22  DateofTermination           104 non-null    object 
+ 23  TermReason                  311 non-null    object 
+ 24  EmploymentStatus            311 non-null    object 
+ 25  Department                  311 non-null    object 
+ 26  ManagerName                 311 non-null    object 
+ 27  ManagerID                   303 non-null    float64
+ 28  RecruitmentSource           311 non-null    object 
+ 29  PerformanceScore            311 non-null    object 
+ 30  EngagementSurvey            311 non-null    float64
+ 31  EmpSatisfaction             311 non-null    int64  
+ 32  SpecialProjectsCount        311 non-null    int64  
+ 33  LastPerformanceReview_Date  311 non-null    object 
+ 34  DaysLateLast30              311 non-null    int64  
+ 35  Absences                    311 non-null    int64  
+dtypes: float64(2), int64(16), object(18)
+memory usage: 87.6+ KB</code></pre>
+</div>
+</div>
+<ul>
+<li>EmpID가 missing이 없는 열임</li>
+</ul>
+<p><strong><em>소윤: 근무인원수가 가장 많은 인종(RaceDesc)은 ’White’이며 이는 ’Asian’인종과 ’Black or African American’의 합보다 많다. — 참</em></strong></p>
+<div class="cell" data-execution_count="79">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a>df.groupby(by<span class="op">=</span><span class="st">'RaceDesc'</span>).agg({<span class="st">'EmpID'</span>:<span class="bu">len</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="79">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>EmpID</th>
+    </tr>
+    <tr>
+      <th>RaceDesc</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>American Indian or Alaska Native</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Asian</th>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>Black or African American</th>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>Hispanic</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Two or more races</th>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>White</th>
+      <td>187</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="80">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a><span class="dv">29</span><span class="op">+</span><span class="dv">80</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="80">
+<pre><code>109</code></pre>
+</div>
+</div>
+<p><strong><em>다호: ’RaceDesc==White’의 성별(Sex)임금차이는 2000이상이다. — 참</em></strong></p>
+<div class="cell" data-execution_count="81">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a>df.groupby(by<span class="op">=</span>[<span class="st">'RaceDesc'</span>,<span class="st">'Sex'</span>]).agg({<span class="st">'Salary'</span>:np.mean})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="81">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Salary</th>
+    </tr>
+    <tr>
+      <th>RaceDesc</th>
+      <th>Sex</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">American Indian or Alaska Native</th>
+      <th>F</th>
+      <td>63436.500000</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>70545.000000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Asian</th>
+      <th>F</th>
+      <td>67520.117647</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>69939.416667</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Black or African American</th>
+      <th>F</th>
+      <td>66963.829787</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>85066.121212</td>
+    </tr>
+    <tr>
+      <th>Hispanic</th>
+      <th>M</th>
+      <td>83667.000000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Two or more races</th>
+      <th>F</th>
+      <td>58068.500000</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>62313.800000</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">White</th>
+      <th>F</th>
+      <td>68846.519231</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>65334.132530</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="82">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="fl">68846.519231</span> <span class="op">-</span> <span class="fl">65334.132530</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="82">
+<pre><code>3512.386700999996</code></pre>
+</div>
+</div>
+<p><strong><em>하니: 퇴직한사람(Termd==1)은 모두 104명이며 백인여성의 퇴직자수가 가장 많다. — 참</em></strong></p>
+<div class="cell" data-execution_count="83">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a>(df.Termd<span class="op">==</span><span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="83">
+<pre><code>104</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="84">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1"></a>df.groupby(by<span class="op">=</span>[<span class="st">'RaceDesc'</span>,<span class="st">'Sex'</span>]).agg({<span class="st">'Termd'</span>:np.<span class="bu">sum</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="84">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Termd</th>
+    </tr>
+    <tr>
+      <th>RaceDesc</th>
+      <th>Sex</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">American Indian or Alaska Native</th>
+      <th>F</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Asian</th>
+      <th>F</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Black or African American</th>
+      <th>F</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>Hispanic</th>
+      <th>M</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Two or more races</th>
+      <th>F</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">White</th>
+      <th>F</th>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>M</th>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong><em>도한: 퇴직한사람중 아시아인의 비율은 10%가 넘지 않는다. — 참</em></strong></p>
+<div class="cell" data-execution_count="85">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a>(df.Termd<span class="op">==</span><span class="dv">1</span>).<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="85">
+<pre><code>104</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="86">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>df.groupby(by<span class="op">=</span>[<span class="st">'RaceDesc'</span>]).agg({<span class="st">'Termd'</span>:np.<span class="bu">sum</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="86">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Termd</th>
+    </tr>
+    <tr>
+      <th>RaceDesc</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>American Indian or Alaska Native</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Asian</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Black or African American</th>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>Hispanic</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Two or more races</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>White</th>
+      <td>63</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="87">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1"></a><span class="dv">9</span><span class="op">/</span><span class="dv">104</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="87">
+<pre><code>0.08653846153846154</code></pre>
+</div>
+</div>
+<p><code>(2)</code> White, Black or African American, Asian 인종(RaceDesc)에 대하여 남여급여차이를 조사하고자 한다. 아래와 같은 Boxplot을 생성하라.</p>
+<p>(풀이)</p>
+<div class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1"></a>ggplot(data<span class="op">=</span>df.query(<span class="st">'RaceDesc == "White" or RaceDesc == "Black or African American" or RaceDesc == "Asian"'</span>))<span class="op">\</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a><span class="op">+</span>geom_boxplot(aes(x<span class="op">=</span><span class="st">'RaceDesc'</span>,y<span class="op">=</span><span class="st">'Salary'</span>,color<span class="op">=</span><span class="st">'Sex'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="2022-10-30-9wk-1-mid_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="88">
+<pre><code>&lt;ggplot: (8776333683953)&gt;</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
