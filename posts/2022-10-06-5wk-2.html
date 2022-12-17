@@ -266,7 +266,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="imports" class="level1">
 <h1>imports</h1>
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -324,11 +324,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="미나드처럼-그리는게-왜-어려운가" class="level2">
 <h2 class="anchored" data-anchor-id="미나드처럼-그리는게-왜-어려운가">미나드처럼 그리는게 왜 어려운가?</h2>
 <p><code>-</code> 몸무게, 키, 성별, 국적</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>df1<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/male1.csv'</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>df2<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/male2.csv'</span>)  </span>
-<span id="cb2-3"><a href="#cb2-3"></a>df3<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/female.csv'</span>) </span>
-<span id="cb2-4"><a href="#cb2-4"></a>df4<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/foreign.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>df1<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/male1.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>df2<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/male2.csv'</span>)  </span>
+<span id="cb2-3"><a href="#cb2-3"></a>df3<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/female.csv'</span>) </span>
+<span id="cb2-4"><a href="#cb2-4"></a>df4<span class="op">=</span>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/foreign.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>-</code> 미나드의 접근방법</p>
 <div class="cell" data-execution_count="61">
@@ -888,9 +888,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="방법3-github등에-공개된-csv를-읽어오기" class="level2">
 <h2 class="anchored" data-anchor-id="방법3-github등에-공개된-csv를-읽어오기">방법3: github등에 공개된 csv를 읽어오기</h2>
-<div class="cell" data-execution_count="90">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/_notebooks/mpg.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="90">
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>pd.read_csv(<span class="st">'https://raw.githubusercontent.com/guebin/DV2022/master/posts/mpg.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
 
 <div>
 
